@@ -1,0 +1,21 @@
+{
+  "name": "pivisa",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.7.7",
+    "circomlib": "^2.0.5",
+    "cors": "^2.8.5",
+    "express": "^4.21.1",
+    "request": "^2.88.2",
+    "snarkjs": "^0.7.5",
+    "unzipper": "^0.12.3"
+  }
+}
