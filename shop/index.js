@@ -1,10 +1,10 @@
-const axios = require('axios');
-const express = require('express');
-const app = express();
-const cron = require('node-cron');
 const cors = require('cors');
+const axios = require('axios');
 const crypto = require('crypto');
+const cron = require('node-cron');
+const express = require('express');
 
+const app = express();
 app.use(cors());
 app.use(express.json());
 const PORT = 5050;
@@ -17,6 +17,7 @@ const transactionData = {
     pi3: "4596163896820185360724586980114658921350506991309581883984297155629702595484",
     shopCardNumber: "1234567890123457"
 };
+
 const mockitems = {
     items: [
         {
@@ -60,9 +61,7 @@ cron.schedule('*/5 * * * * *', () => {
 
 // Endpoint to create a transaction order
 app.post('/create-transaction', async (req, res) => {
-    // should get the transaction data from the request body
     const { items, pi3 } = req.body;
-    // const { TX, amount, pi3, shopCardNumber } = req.body;
 
     // check items are not empty
     if (!items || items.length === 0) {
@@ -100,13 +99,19 @@ app.post('/create-transaction', async (req, res) => {
     };
     txs.push(tx);
     try {
-        const response = await axios.post('http://localhost:4000/create-transaction', 
-        { transaction: tx.transaction, amount: tx.amount, pi3: pi3, shopCardNumber: shopCardNumber });
-        if (response.status === 200) {
-            console.log(response.data.message);
-            res.status(200).json({ message: 'Transaction order created', transaction: tx });
+        const response = await fetch('http://localhost:4000/create-transaction', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ transaction: tx.transaction, amount: tx.amount, pi3: pi3, shopCardNumber: shopCardNumber }),
+        });
+        if(!response.ok){
+            throw new Error("Error creating transaction");
         }
-        console.log(response.data.message);
+        res.status(200).json({ message: 'Transaction order created', transaction: tx });
+        return;
+
     } catch (error) {
         console.error("Error creating transaction:", error.message);
     }

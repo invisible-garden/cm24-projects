@@ -4,26 +4,19 @@ const fs = require('fs');
 const { execSync } = require('child_process');
 const circomlibjs = require("circomlibjs");
 const crypto = require('crypto');
-const app = express();
-const PORT = 4000;
-// add cors
 const cors = require('cors');
-const { verify } = require('crypto');
+
+const app = express();
+
 app.use(cors());
-
-// let poseidon; // Declare poseidon variable globally
-
-// // Initialize Poseidon hash function
-// (async () => {
-//     poseidon = await circomlibjs.buildPoseidon();
-// })();
-
+app.use(express.json());
+const PORT = 4000;
 
 // mock card with the balance 
 let cardsBalances = [{
     // user
     card_number: '1234567890123456',
-    balance: 100,
+    balance: 1000,
     nonce: 0
 },
 {
@@ -37,23 +30,12 @@ let cards = [];
 
 let TXs = [];
 
-// Middleware to parse JSON requests
-app.use(express.json());
-
-// hash the string using SHA-256 and convert it to a BigInt-compatible format
-function hashStringToBigInt(input) {
-    const hash = crypto.createHash('sha256').
-        update(input).digest('hex');
-    return BigInt('0x' + hash).toString();
-}
-
 // hash the number using SHA-256 and convert it to a BigInt-compatible format
 function hashNumberToBigInt(input) {
     const hash = crypto.createHash('sha256').
         update(input.toString()).digest('hex');
     return BigInt('0x' + hash).toString();
 }
-
 
 // Generate Nonce for the transaction
 // function generateNonce() {
@@ -141,14 +123,15 @@ app.post('/create-transaction', async (req, res) => {
         return;
     }
 
+    const userNonce = cardsBalances.find(c => c.card_number === card.card_number).nonce;
+
     const tx = {
         pi3: card.pi3,
         transaction: transaction,
         amount: amount,
         shopCardNumber: shopCardNumber,
         status: 'pending',
-        // nonce: nonce,
-        nonce: 0,
+        nonce: userNonce,
     };
     TXs.push(tx);
 
@@ -179,66 +162,6 @@ app.get('/check-transaction/:tx', async (req, res) => {
     res.status(200).json({ message: 'Transaction found', transaction: transaction });
 });
 
-// Endpoint to verify the transaction proof
-// app.post('/verify-transaction', async (req, res) => {
-//     const { proof, publicSignals } = req.body;
-//     //  **** bug when user create many transaction
-//     try {
-//         const verificationKey = JSON.parse(fs.readFileSync("cardVerification_verification_key.json"));
-//         const PIA = publicSignals[0];
-//         console.log("PIA:", PIA);
-//         console.log("cards:", cards);
-//         // Verify proof
-//         const isValid = await snarkjs.groth16.verify(verificationKey, publicSignals, proof);
-//         if (isValid) {
-//             const card = cards.find(c => c.pi3 === PIA);
-
-//             if (!card) {
-//                 console.log("Card not found");
-//                 res.status(400).json({ message: 'Card not found' });
-//                 return;
-//             }
-//             // check that the transaction is not already stored
-//             const tx = TXs.find(t => t.pi3 === PIA);
-//             console.log("Transaction found:", tx);
-//             if (!tx) {
-//                 console.log("Transaction not found");
-//                 res.status(400).json({ message: 'Transaction not found' });
-//                 return;
-//             }
-//             tx.status = 'approved';
-//             const card_number = cards.find(c => c.pi3 === PIA).card_number;
-//             console.log("Card found:", card_number);
-
-//             // transfer the amount from the user card to the shop card
-//             const userCard = cardsBalances.find(c => c.card_number === card_number);
-//             const shopCard = cardsBalances.find(c => c.card_number === tx.shopCardNumber);
-
-//             console.log("userCard:", userCard);
-//             console.log("shopCard:", shopCard);
-
-//             if (userCard.balance < tx.amount) {
-//                 console.log("Insufficient balance");
-//                 res.status(400).json({ message: 'Insufficient balance' });
-//                 return;
-//             }
-
-//             userCard.balance = Number(userCard.balance) - Number(tx.amount);
-//             shopCard.balance = Number(shopCard.balance) + Number(tx.amount);
-
-//             console.log("Transaction proof verification successful");
-//             console.log("card:", card);
-//             // res.status(200).json({ message: 'Proof verified successfully' });
-//             res.status(200).json({ message: 'Proof verified successfully', card_number: card_number, transaction: tx.transaction, amount: tx.amount });
-//         } else {
-//             console.log("Transaction proof verification failed");
-//             res.status(400).json({ message: 'Invalid proof' });
-//         }
-//     } catch (error) {
-//         console.error("Error during transaction verification:", error);
-//         res.status(500).json({ message: 'Error during transaction verification', error: error.toString() });
-//     }
-// });
 app.post('/verify-transaction', async (req, res) => {
     const { proof, publicSignals, transaction, nonce } = req.body;
     const pia = publicSignals[0];
@@ -260,8 +183,7 @@ app.post('/verify-transaction', async (req, res) => {
             return;
         }
         const n = cardsBalances.find(c => c.card_number === cards.find(c => c.pi3 === pia).card_number).nonce;
-        console.log("n:", n);
-        console.log("tx:", tx);
+
         // Assume `pia` was derived from the verification setup (h(pi2 + CVC))
         const generatedX = await computeVerificationHash(pia, tx, hashNumberToBigInt(n));
 
@@ -282,10 +204,6 @@ app.post('/verify-transaction', async (req, res) => {
             const userCard = cardsBalances.find(c => c.card_number === card_number);
             const shopCard = cardsBalances.find(c => c.card_number === tx.shopCardNumber);
 
-
-            console.log("userCard:", userCard);
-            console.log("shopCard:", shopCard);
-
             if (userCard.balance < tx.amount) {
                 console.log("Insufficient balance");
                 res.status(400).json({ message: 'Insufficient balance' });
@@ -295,7 +213,7 @@ app.post('/verify-transaction', async (req, res) => {
             userCard.balance = Number(userCard.balance) - Number(tx.amount);
             shopCard.balance = Number(shopCard.balance) + Number(tx.amount);
 
-            userCard.nonce = nonce + 1;
+            userCard.nonce = userCard.nonce + 1;
 
             console.log("Transaction proof verification successful");
             console.log("cardsBalances:", cardsBalances);
@@ -317,29 +235,15 @@ async function computeVerificationHash(pia, tx, nonce) {
 
     // Prepare inputs for Poseidon hashing
     const inputArray = [
-        // BigInt(pia),
-        // BigInt(tx),
-        // BigInt(nonce)
         pia,
         tx,
         nonce
     ];
-    console.log("inputArray:", inputArray);
-
-    // Perform the Poseidon hash
-    // const hashResult = poseidon(inputArray);
-
-    // Convert the hash result to a hexadecimal string
-    // const generatedX = poseidon.F.toString(hashResult);
-    // const generatedX = circomlibjs.poseidon(inputArray).toString();
+    // Generate X using Poseidon hash function
     const poseidon = await circomlibjs.buildPoseidon();
     const generatedX = poseidon.F.toString(poseidon(inputArray));
-    console.log(generatedX);
 
     return generatedX;
-
-
-    // return generatedX;
 }
 
 // Function to run shell commands
@@ -373,6 +277,6 @@ function compileAndSetupCircuits() {
 
 // Start the server
 app.listen(PORT, () => {
-    compileAndSetupCircuits();
+    // compileAndSetupCircuits();
     console.log(`Bank server is running on port ${PORT}`);
 });
