@@ -1,31 +1,21 @@
 # {Project Name}
 
-Moodle Web 3 is a "key on hand" learning management system (LMS) that integrates web3 tools, including an Ethereum wallet where users can receive their certifications as NFTs, as well as POAPs (Proof of Attendance Protocol tokens) and other digital assets. With Push Protocol notifications, this innovative platform offers a user-friendly introduction to the web3 ecosystem, enabling educators and learners to interact with decentralized applications, manage digital assets securely, and receive real-time updates—all within an intuitive interface. By bridging traditional education with cutting-edge technology, Moodle Web 3 enhances the learning experience and prepares users for the Web3 Ecosystem.
+Enter the name of your project above and provide a brief description of your project.
 
 ## Team Information
 
 **Project Members**
 
-- Name: Alex Padilla (@padimaster)
-  - Discord Username: padimasterec
-  - Devfolio Username: padimasterec
-  - Role: CEO
-
-- Name: Paul Rodas (@padimaster)
-  - Discord Username: padimasterec
-  - Devfolio Username: padimasterec
-  - Role: CEO
-
-- Name: Carlos Jimenez (@padimaster)
-  - Discord Username: padimasterec
-  - Devfolio Username: padimasterec
-  - Role: CEO
+- Name: {Full Name}
+  - Discord Username: {username}
+  - Devfolio Username: {username}
+  - Role: {Role}
 
 ## Technical Approach
 
 - **Components** (Select all that apply)
-  - [X] Frontend
-  - [X] Backend
+  - [ ] Frontend
+  - [ ] Backend
   - [ ] Smart Contracts
   - [ ] ZK Circuits
   - [ ] Machine Learning (ML)
@@ -36,7 +26,7 @@ Moodle Web 3 is a "key on hand" learning management system (LMS) that integrates
 
 If you are applying for a sponsor project idea or grant, select the sponsors below.
 
-- [X] Push Protocol
+- [ ] Push Protocol
 - [ ] Polygon
 - [ ] Chainlink
 - [ ] Brevis
