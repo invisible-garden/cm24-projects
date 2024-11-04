@@ -1,0 +1,72 @@
+{
+  "name": "app",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "lint": "eslint .",
+    "preview": "vite preview",
+    "bundle-solc": "bunx browserify ./src/lib/bundler.js > ./src/lib/bundle_solc.js -t babelify"
+  },
+  "dependencies": {
+    "@ethereumjs/block": "^5.3.0",
+    "@ethereumjs/common": "^4.4.0",
+    "@ethereumjs/tx": "^5.4.0",
+    "@ethereumjs/vm": "^8.1.1",
+    "@monaco-editor/react": "^4.6.0",
+    "@radix-ui/react-icons": "^1.3.0",
+    "@radix-ui/react-slot": "^1.1.0",
+    "@replit/codemirror-lang-solidity": "^6.0.2",
+    "@types/node": "^22.7.4",
+    "@uiw/codemirror-theme-tokyo-night-day": "^4.23.5",
+    "@uiw/react-codemirror": "^4.23.5",
+    "class-variance-authority": "^0.7.0",
+    "clsx": "^2.1.1",
+    "events": "^3.3.0",
+    "highlight.js": "^11.10.0",
+    "highlightjs-solidity": "^2.0.6",
+    "jotai": "^2.10.0",
+    "jotai-immer": "^0.4.1",
+    "lodash": "^4.17.21",
+    "lucide-react": "^0.447.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-use": "^17.5.1",
+    "solc": "^0.8.27",
+    "solc-typed-ast": "^18.2.3",
+    "solidity-ast": "^0.4.59",
+    "tailwind-merge": "^2.5.3",
+    "tailwindcss-animate": "^1.0.7",
+    "viem": "^2.21.21",
+    "vite-plugin-node-polyfills": "^0.22.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.12.0",
+    "@types/highlight.js": "^10.1.0",
+    "@types/lodash": "^4.17.10",
+    "@types/react": "^18.3.11",
+    "@types/react-dom": "^18.3.0",
+    "@vitejs/plugin-react-swc": "^3.7.1",
+    "autoprefixer": "^10.4.20",
+    "babelify": "^10.0.0",
+    "browserify": "^17.0.1",
+    "cz-conventional-changelog": "^3.3.0",
+    "eslint": "^9.12.0",
+    "eslint-plugin-react-hooks": "^5.1.0-rc-fb9a90fa48-20240614",
+    "eslint-plugin-react-refresh": "^0.4.12",
+    "globals": "^15.10.0",
+    "jotai-devtools": "^0.10.1",
+    "postcss": "^8.4.47",
+    "tailwindcss": "^3.4.13",
+    "typescript": "^5.6.2",
+    "typescript-eslint": "^8.8.0",
+    "vite": "^5.4.8"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
+}
