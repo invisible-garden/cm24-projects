@@ -1,0 +1,37 @@
+services:
+  moodle:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      - MOODLE_MIDDLEWARE_HOST=52.23.242.161:3000 # Replace with your middleware IP
+      - MOODLE_DB_TYPE=mariadb
+      - MOODLE_DB_HOST=db
+      - MOODLE_DB_PORT=3306
+      - MOODLE_DB_NAME=moodle
+      - MOODLE_DB_USER=moodleuser
+      - MOODLE_DB_PASS=moodlepass
+    volumes:
+      - moodledata:/var/www/html/moodledata
+    ports:
+      - "80:80"
+    depends_on:
+      - db
+
+  db:
+    image: mariadb:latest
+    restart: always
+    command: mariadbd --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci --init-connect='SET NAMES UTF8;' --innodb-flush-log-at-trx-commit=0
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpass
+      MYSQL_DATABASE: moodle
+      MYSQL_USER: moodleuser
+      MYSQL_PASSWORD: moodlepass
+    volumes:
+      - dbdata:/var/lib/mysql
+    ports:
+      - "3306:3306"
+
+volumes:
+  moodledata:
+  dbdata:
