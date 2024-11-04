@@ -1,4 +1,4 @@
-# AI Training Data Selling with Privacy Protection (for client)
+# {Project Name}
 
 Enter the name of your project above and provide a brief description of your project.
 
@@ -6,25 +6,10 @@ Enter the name of your project above and provide a brief description of your pro
 
 **Project Members**
 
-- Name: Ninh Quoc Bao
-  - Discord Username: BaoNinh
-  - Devfolio Username: BaoNinh
-  - Role: Team Lead, Propose Idea, Implement and Write Document
-
-- Name: Nguyen Minh Nhat
-  - Discord Username: nacon304
-  - Devfolio Username: nacon304
-  - Role: explore federated learning and zk-SNARK for Machine Learning
-
-- Name: Phan Van Nhat
-  - Discord Username: nhatsequoia
-  - Devfolio Username: nhatsequoia
-  - Role: explore proof aggregation
-  
-- Name: Truong Vinh Kien
-  - Discord Username: KienTruong
-  - Devfolio Username: KienTruong
-  - Role: explore proof aggregation
+- Name: {Full Name}
+  - Discord Username: {username}
+  - Devfolio Username: {username}
+  - Role: {Role}
 
 ## Technical Approach
 
@@ -32,8 +17,8 @@ Enter the name of your project above and provide a brief description of your pro
   - [ ] Frontend
   - [ ] Backend
   - [ ] Smart Contracts
-  - [x] ZK Circuits
-  - [x] Machine Learning (ML)
+  - [ ] ZK Circuits
+  - [ ] Machine Learning (ML)
 
 - High-level outline of the main technical components, tech you used and approaches used in the project.
 
@@ -47,8 +32,8 @@ If you are applying for a sponsor project idea or grant, select the sponsors bel
 - [ ] Brevis
 - [ ] Orbiter
 - [ ] ZKM
-- [x] Nethermind
-- [x] PSE
+- [ ] Nethermind
+- [ ] PSE
 - [ ] AltLayer
 
 ## What do you plan to achieve with your project?
