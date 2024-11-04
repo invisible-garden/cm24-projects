@@ -35,7 +35,7 @@ WORKDIR /var/www/html
 RUN chown -R www-data:www-data /var/www/ && chmod -R 744 /var/www/
 
 # Add custom PHP settings
-COPY ./php.ini /etc/php/8.3/apache2/conf.d/99-custom.ini
+COPY ./config/moodle/php.ini /etc/php/8.3/apache2/conf.d/99-custom.ini
 
 # Expose Apache and set up environment variables
 EXPOSE 80
@@ -44,7 +44,7 @@ ENV MOODLE_DOCKER=1
 # Configure Apache to serve Moodle
 RUN echo "ServerName localhost" >> /etc/apache2/apache2.conf
 RUN a2enmod rewrite
-COPY ./apache-moodle.conf /etc/apache2/sites-available/000-default.conf
+COPY ./config/moodle/apache-moodle.conf /etc/apache2/sites-available/000-default.conf
 
 # Start Apache in the foreground
 CMD ["apachectl", "-D", "FOREGROUND"]
