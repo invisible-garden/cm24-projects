@@ -121,8 +121,6 @@ Key components include our model integration scripts for RawNet3 and Wave2Vec2, 
 
 ## Project Links (For Submission)
 
-Please provide links for the project repo and to any relevant documentation, code, or other resources that you've used in your project.
-
 Our Repository
 - https://github.com/Privacy-Lab-Latam-Builders/voizk-ML
 
@@ -139,4 +137,4 @@ Models
 
 ## Video Demo (For Submission)
 
-Please provide a link to a video demo of your project. The demo should be no longer than 5 minutes.
+https://www.canva.com/design/DAGVmth36Zo/_8A49njtFu42ht_GzzX01g/watch?utm_content=DAGVmth36Zo&utm_campaign=designshare&utm_medium=link&utm_source=editor
