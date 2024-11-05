@@ -6,16 +6,16 @@ Omnichat is a powerful backend solution that syncs messages across Push, Discord
 
 **Project Members**
 
-- Name: Guilherme Heilmann Costa Neves
-  - Discord Username: 0xneves
-  - Devfolio Username: 0xneves
-  - Github Username: 0xneves
-  - Role: Full Stack Developer
-
 - Name: Anderson Lottermann Thome
   - Discord Username: andersonlthome
   - Devfolio Username: andersonlthome
   - Github Username: andersonlthome
+  - Role: Full Stack Developer
+  
+- Name: Guilherme Heilmann Costa Neves
+  - Discord Username: 0xneves
+  - Devfolio Username: 0xneves
+  - Github Username: 0xneves
   - Role: Full Stack Developer
 
 ## Technical Approach
@@ -27,7 +27,7 @@ Omnichat is a powerful backend solution that syncs messages across Push, Discord
   - [ ] ZK Circuits
   - [ ] Machine Learning (ML)
 
-- High-level outline of the main technical components, tech you used and approaches used in the project.
+We used Node.js for the backend, and the Discord, Push and Telegram APIs for the integrations.
 
 ## Sponsors (if applicable)
 
@@ -45,7 +45,9 @@ If you are applying for a sponsor project idea or grant, select the sponsors bel
 
 ## What do you plan to achieve with your project?
 
-If Push allows us to keep working on this project, we plan to create an official push bot that will be able to operate on Push, Discord, and Telegram. We could for instance, relay push notifications through the same bot to other platforms. Build a front-end where users can deploy and manage their bot specs.
+- If Push allows us to keep working on this project, we plan to create an official push bot that will be able to operate on Push, Discord, and Telegram. 
+- We could for instance, relay push notifications through the same bot to other platforms. 
+- Build a front-end where users can deploy and manage their bot specs.
 
 ## Lessons Learned (For Submission)
 
