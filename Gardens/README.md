@@ -181,4 +181,4 @@ Next step is to finish our contracts diamond pattern and conduct a security audi
 
 ## Video Demo
 
-Please provide a link to a video demo of your project. The demo should be no longer than 5 minutes.
+[Gardens Demo Video](https://drive.google.com/file/d/1WZ2hLvSzr2MEyrt8qlic85UfxQBRA0jj/view?usp=drive_link)
