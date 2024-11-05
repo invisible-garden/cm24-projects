@@ -132,4 +132,4 @@ Please provide a link to a video demo of your project. The demo should be no lon
 
 > [Video Submission](https://www.loom.com/share/c7c735e322b04d6cb48c7dfae1a6c603?sid=ced74c8d-d9b6-4c76-85f7-01e4a6047102)
 
-# Thannkyou!
+# Thankyou!
