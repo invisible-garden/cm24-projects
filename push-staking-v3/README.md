@@ -1,7 +1,7 @@
 # PUSH STAKING V3
 
-In the current live version of the Push Protocol, staking for token holders is enabled within `PushCoreV2.sol`. The `PushCoreV2.sol` contract incorporates several streams of functionality: channel management, notifications management as well as staking.
-The new `Push Staking V3` feature will move staking into a dedicated contract and will extend staking capabilities to both token holders and to protocol integrators. In the new `PushStaking.sol` contract, incoming staking rewards are separated into 2 pools, one for token holder rewards and one for wallet integrator rewards. Wallet integrators are added / removed to the contract via governance votes.
+In the current live version of the Push Protocol, staking for token holders is enabled within `PushCoreV2.sol`. The `PushCoreV2.sol` contract incorporates several streams of functionality: channel management, notifications management, fees collection as well as staking.
+The new `Push Staking V3` feature will move staking into a dedicated contract and will extend staking capabilities to protocol integrator wallets alongside token holders. In the new `PushStaking.sol` contract, incoming staking rewards are separated into 2 pools, one for token holder rewards and one for wallet integrator rewards. Wallet integrators are added / removed to the contract via governance votes.
 
 ## Team Information
 
@@ -51,20 +51,20 @@ PushStaking is a new contract that takes over some responsibilities from PushCor
 
 ## What do you plan to achieve with your project?
 
-The success of my project is determined by meeting the detailed project specifications outlined in the Push team's project description [document](https://pushprotocol.notion.site/Push-Staking-v3-111188aea7f4806c94edd1d85d2eadbb#111188aea7f48024ba1fd6e26bbbaef5) and in ensuring the development of a fully operational staking protocol that is ready for on-chain deployment, enabling token holder and wallet integrator participation and fostering engagement within the protocol.
+The success of my project is determined by meeting the detailed project specifications outlined in the Push team's project description [document](https://pushprotocol.notion.site/Push-Staking-v3-111188aea7f4806c94edd1d85d2eadbb#111188aea7f48024ba1fd6e26bbbaef5) and in ensuring the development of a fully operational staking protocol that is ready for on-chain deployment, enabling token holder and protocol integrator wallet participation, fostering added engagement in the protocol.
 
 I plan to continue developing the test suite for the project and to make revisions to the code based on feedback from the Push team.
 
 ## Lessons Learned
 
-I needed to submit a grant proposal to qualify for prize money for developing this project. It was a good experience, as it was my first time participating in the grant process and in open-source and public-good work.
-This is the link to my grant
+I submitted a grant proposal to qualify for a bounty for developing this project. It was a good experience, as it was my first time participating in the grant process and in open-source and public-good work.
+Link to my grant
 [proposal](https://app.charmverse.io/push-dao/pushstakingv3-5437035867423043).
 
 ## Project Links
 
 - To see a diff of the changes I made to the Push Protocol codebase, please look at the `Files changed` tab [here](https://github.com/Mouzayan/push-staking/compare/master...v3-staking).
-- Push Staking specific [README](https://github.com/Mouzayan/push-staking/blob/v3-staking/README_V3STAKING.md).
+- Push Staking specific [README](https://github.com/Mouzayan/push-staking/blob/v3-staking/README_V3STAKING.md) explaining the full scope of the project.
 - Added files:
    -  [Push Staking README](https://github.com/Mouzayan/push-staking/blob/v3-staking/README_V3STAKING.md)
    -  [PushCoreStorageV3.sol](https://github.com/Mouzayan/push-staking/blob/v3-staking/contracts/PushCore/PushCoreStorageV3.sol)
