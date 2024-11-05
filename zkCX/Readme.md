@@ -22,11 +22,11 @@ Project Members
 - Github Username: {username}
 - Role: {Role}
 
-- Name: {Full Name}
-- Discord Username: {username}
-- Devfolio Username: {username}
-- Github Username: {username}
-- Role: {Role}
+- Name: `TANMAY GOEL`
+- Discord Username: `guyphy`
+- Devfolio Username: [`GuyPhy`](https://devfolio.co/@GuyPhy)
+- Github Username: [`GuyPhy`](https://github.com/GuyPhy)
+- Role: `Developer`
 
 ## Technical Approach
 Components (Select all that apply)
