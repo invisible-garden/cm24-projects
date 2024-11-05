@@ -9,18 +9,18 @@
 ## Team Information
 Project Members
 
-- Name: {ARPIT KUMAR}
+#### Name: {ARPIT KUMAR}
 - Discord Username: {dungeon_master4227}
 - Devfolio Username: {DungeoN}
 - Github Username: {ArpitxGit}
 - Role: {Developer}
 
 
-- Name: {Full Name}
-- Discord Username: {username}
-- Devfolio Username: {username}
-- Github Username: {username}
-- Role: {Role}
+- Name: {Manul Singh Parihar}
+- Discord Username: {jeremy_connor}
+- Devfolio Username: {jeremy_connor}
+- Github Username: {ManulParihar}
+- Role: {Developer}
 
 - Name: `TANMAY GOEL`
 - Discord Username: `guyphy`
