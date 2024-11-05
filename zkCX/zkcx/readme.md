@@ -1,25 +1,5 @@
 # ZKCX Rust Implementation
 
-## Project Structure
-
-zkcx/
-├── src/
-│ ├── certificate.rs # Parses X.509 certificates
-│ ├── grothproof.rs # Manages Groth16 proof generation and verification
-│ ├── hashCert.rs # Hashes certificate fields (e.g., serial numbers)
-│ ├── main.rs # Entry point for the application
-│ ├── proofCache.rs # Caches proofs to avoid redundant computations
-│ └── zk_proof.rs # ZK proof orchestration, combining hashing, proof generation, and verification
-├── target/ # Compiled binaries
-├── verifier_contract//
-│ ├── contracts/ContractRegistry.sol # Registry Contract
-│ ├── scripts/deploy.js # Script to deploy contract
-│ ├── test/CertificateRegistry.js # Test Script
-│ ├── ...
-├── cargo.lock
-├── cargo.toml
-└── readme.md
-
 ## Getting Started
 
 1. Install Rust: [https://www.rust-lang.org/tools/install](https://www.rust-lang.org/tools/install)
