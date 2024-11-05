@@ -8,11 +8,13 @@ We are engage in collaborative research on various topics related to next-genera
 
 **Project Members**
 
-- Name: {Full Name}
-  - Discord Username: {username}
-  - Devfolio Username: {username}
-  - Github Username: {username}
-  - Role: {Role}
+- Name: bing hwang
+  - Discord Username: 8films
+  - Devfolio Username: 8films
+  - Github Username: eightfilms
+  - Role: researcher
+
+
 
 ## Technical Approach
 
