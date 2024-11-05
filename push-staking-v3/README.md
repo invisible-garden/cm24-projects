@@ -1,7 +1,7 @@
 # PUSH STAKING V3
 
-In the current live version of the Push Protocol, staking for token holders is enabled within `PushCoreV2.sol`. The `PushCoreV2.sol` contract incorporates several streams of functionality: channel management, notifications as well as staking.
-The new `PushStakingV3.sol` will move staking into a dedicated contract and will extend staking capabilities to both token holders and to protocol integrators. In the new `PushStaking` contract, incoming staking rewards will be separated into 2 pools, one for token holder rewards and one for wallet integrator rewards. Integrators are added / removed to the contract via governance votes.
+In the current live version of the Push Protocol, staking for token holders is enabled within `PushCoreV2.sol`. The `PushCoreV2.sol` contract incorporates several streams of functionality: channel management, notifications management as well as staking.
+The new `Push Staking V3` feature will move staking into a dedicated contract and will extend staking capabilities to both token holders and to protocol integrators. In the new `PushStaking.sol` contract, incoming staking rewards are separated into 2 pools, one for token holder rewards and one for wallet integrator rewards. Wallet integrators are added / removed to the contract via governance votes.
 
 ## Team Information
 
@@ -55,23 +55,23 @@ The success of my project is determined by meeting the detailed project specific
 
 I plan to continue developing the test suite for the project and to make revisions to the code based on feedback from the Push team.
 
-## Lessons Learned (For Submission)
+## Lessons Learned
 
 I needed to submit a grant proposal to qualify for prize money for developing this project. It was a good experience, as it was my first time participating in the grant process and in open-source and public-good work.
-This is the link to
-[grant proposal](https://app.charmverse.io/push-dao/pushstakingv3-5437035867423043).
+This is the link to my grant
+[proposal](https://app.charmverse.io/push-dao/pushstakingv3-5437035867423043).
 
-## Project Links (For Submission)
+## Project Links
 
-- To see a diff of the changes I made to the Push Protocol codebase, please look at the **Files changed** tab [here](https://github.com/Mouzayan/push-staking/compare/master...v3-staking).
-- Push Staking [README](https://github.com/Mouzayan/push-staking/blob/v3-staking/README_V3STAKING.md).
+- To see a diff of the changes I made to the Push Protocol codebase, please look at the `Files changed` tab [here](https://github.com/Mouzayan/push-staking/compare/master...v3-staking).
+- Push Staking specific [README](https://github.com/Mouzayan/push-staking/blob/v3-staking/README_V3STAKING.md).
 - Added files:
-     [Push Staking README](https://github.com/Mouzayan/push-staking/blob/v3-staking/README_V3STAKING.md)
-     [PushCoreStorageV3.sol](https://github.com/Mouzayan/push-staking/blob/v3-staking/contracts/PushCore/PushCoreStorageV3.sol)
-     [PushCoreV3.sol](https://github.com/Mouzayan/push-staking/blob/v3-staking/contracts/PushCore/PushCoreV3.sol)
-     [PushStaking.sol](https://github.com/Mouzayan/push-staking/blob/v3-staking/contracts/PushStaking/PushStaking.sol)
-     [IPushStaking.sol](https://github.com/Mouzayan/push-staking/blob/v3-staking/contracts/interfaces/IPushStaking.sol)
-     **In progress - do not run** [PushStaking.test.js](https://github.com/Mouzayan/push-staking/blob/v3-staking/test/v3/PushStaking.test.js)
+   -  [Push Staking README](https://github.com/Mouzayan/push-staking/blob/v3-staking/README_V3STAKING.md)
+   -  [PushCoreStorageV3.sol](https://github.com/Mouzayan/push-staking/blob/v3-staking/contracts/PushCore/PushCoreStorageV3.sol)
+   -  [PushCoreV3.sol](https://github.com/Mouzayan/push-staking/blob/v3-staking/contracts/PushCore/PushCoreV3.sol)
+   -  [PushStaking.sol](https://github.com/Mouzayan/push-staking/blob/v3-staking/contracts/PushStaking/PushStaking.sol)
+   -  [IPushStaking.sol](https://github.com/Mouzayan/push-staking/blob/v3-staking/contracts/interfaces/IPushStaking.sol)
+   - **In progress - do not run** [PushStaking.test.js](https://github.com/Mouzayan/push-staking/blob/v3-staking/test/v3/PushStaking.test.js)
 
 
 ## Video Demo (For Submission)
