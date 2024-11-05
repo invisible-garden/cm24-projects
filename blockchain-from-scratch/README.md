@@ -7,7 +7,7 @@ I'm new in web3, so i created this project to help beginners like me to understa
 
 **Project Members**
 
-- Name: {Full Name}
+- Name: Evan
   - Discord Username: @Evan/egoss7875
   - Devfolio Username: yige
   - Github Username: EgoSay [Yige(Evan)](https://github.com/EgoSay)
