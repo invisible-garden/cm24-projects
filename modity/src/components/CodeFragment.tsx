@@ -46,7 +46,7 @@ const focusTheme = EditorView.theme({
   },
 });
 
-export const GlobalSelect = atom<number | undefined>();
+export const GlobalSelect = atom<string | undefined>();
 GlobalSelect.debugLabel = "GlobalSelect";
 
 export default function CodeFragment({
@@ -100,7 +100,7 @@ export default function CodeFragment({
   return (
     <div
       ref={domRef}
-      onClick={() => setActive(index)}
+      onClick={() => setActive(fragment.uuid)}
       className={cn([className, "group"])}
     >
       <div className="fragment-code flex mb-2">
@@ -109,6 +109,7 @@ export default function CodeFragment({
             index={runIndex}
             type={"input"}
             isCollapsedAtom={isCollapsedAtom}
+            uuid={fragment.uuid}
           />
           <CodeMirror
             className="flex-grow"
@@ -126,7 +127,11 @@ export default function CodeFragment({
       </div>
       {fragment.result?.value !== undefined ? (
         <div className="fragment-result flex mt-2">
-          <CodeFragmentHeader index={runIndex} type={"output"} />
+          <CodeFragmentHeader
+            index={runIndex}
+            type={"output"}
+            uuid={fragment.uuid}
+          />
           <RenderResult {...fragment.result} />
         </div>
       ) : (
@@ -134,7 +139,7 @@ export default function CodeFragment({
       )}
       {fragment.error && (
         <div className="fragment-result flex mt-2">
-          <CodeFragmentHeader index={runIndex} type={"error"} />
+          <CodeFragmentHeader index={runIndex} type={"error"} uuid={fragment.uuid} />
           <ErrorMessage error={fragment.error} />
         </div>
       )}
@@ -214,56 +219,34 @@ const CodeFragmentHeaderColor: Record<CodeFragmentType, string> = {
 
 type CodeFragmentHeaderProps = {
   index?: number;
+  uuid: string;
   type: CodeFragmentType;
   isCollapsedAtom?: PrimitiveAtom<boolean>;
 };
 
 function CodeFragmentHeader({
   index,
+  uuid,
   type,
   isCollapsedAtom,
 }: CodeFragmentHeaderProps) {
-  const [isCollapsed, setIsCollapsed] = useAtom(isCollapsedAtom ?? atom(false));
   const active = useAtomValue(GlobalSelect);
-
-  const toggleCollapse = () => {
-    setIsCollapsed(!isCollapsed);
-  };
 
   return (
     <>
       <div
         className={cn(
           "w-2 mr-4 h-auto transition-colors duration-500",
-          active === index && !!index ? "bg-blue-500" : "bg-transparent"
+          active === uuid && !!uuid ? "bg-blue-500" : "bg-transparent"
         )}
       ></div>
-      {isCollapsedAtom ? (
-        <button
-          onClick={toggleCollapse}
-          className={cn(
-            "top-1 opacity-0 group-hover:opacity-100 transition-opacity flex pt-1 mr-4 relative w-[15px] h-[15px]",
-            isCollapsed ? "opacity-100" : "opacity-0"
-          )}
-        >
-          <div
-            className={`absolute inset-0 transition-all duration-300 ${
-              isCollapsed ? "opacity-100" : "opacity-0"
-            }`}
-          >
-            <ChevronsUpDown size={15} />
-          </div>
-          <div
-            className={`absolute inset-0 transition-all duration-300 ${
-              isCollapsed ? "opacity-0" : "opacity-100"
-            }`}
-          >
-            <ChevronsDownUp size={15} />
-          </div>
-        </button>
-      ) : (
-        ""
-      )}
+      <div className="w-4">
+        {isCollapsedAtom ? (
+          <CodeFragmentHeaderCollapse isCollapsedAtom={isCollapsedAtom} />
+        ) : (
+          ""
+        )}
+      </div>
       <div
         className={cn(
           "mt-[2px] mr-4 text-xs font-mono",
@@ -274,5 +257,41 @@ function CodeFragmentHeader({
         [{index ?? " "}]:{" "}
       </div>
     </>
+  );
+}
+
+function CodeFragmentHeaderCollapse({
+  isCollapsedAtom,
+}: {
+  isCollapsedAtom: PrimitiveAtom<boolean>;
+}) {
+  const [isCollapsed, setIsCollapsed] = useAtom(isCollapsedAtom);
+
+  const toggleCollapse = () => {
+    setIsCollapsed(!isCollapsed);
+  };
+  return (
+    <button
+      onClick={toggleCollapse}
+      className={cn(
+        "top-1 opacity-0 group-hover:opacity-100 transition-opacity flex pt-1 mr-4 relative w-[15px] h-[15px]",
+        isCollapsed ? "opacity-100" : "opacity-0"
+      )}
+    >
+      <div
+        className={`absolute inset-0 transition-all duration-300 ${
+          isCollapsed ? "opacity-100" : "opacity-0"
+        }`}
+      >
+        <ChevronsUpDown size={15} />
+      </div>
+      <div
+        className={`absolute inset-0 transition-all duration-300 ${
+          isCollapsed ? "opacity-0" : "opacity-100"
+        }`}
+      >
+        <ChevronsDownUp size={15} />
+      </div>
+    </button>
   );
 }

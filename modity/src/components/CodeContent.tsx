@@ -1,5 +1,5 @@
 import { Source } from "@/lib/source";
-import CodeFragment from "./CodeFragment";
+import CodeFragment, { GlobalSelect } from "./CodeFragment";
 import { atom, useAtom, useSetAtom } from "jotai";
 import { splitAtom } from "jotai/utils";
 import { atomWithImmer } from "jotai-immer";
@@ -212,7 +212,6 @@ contract A is ERC20{
     _mint(msg.sender,1000 ether);
   }
 }`,
-    runned: RunnedStatus.NotRunned,
   },
   {
     uuid: nanoid(),
@@ -224,6 +223,10 @@ FragmentsAtom.debugLabel = "FragmentsAtom";
 
 export const FragmentAtomsAtom = splitAtom(FragmentsAtom);
 FragmentAtomsAtom.debugLabel = "FragmentAtomsAtom";
+
+export const getCurrentFragment = (fragments: FragmentData[],uuid: string) => {
+  return fragments.find((fragment) => fragment.uuid === uuid);
+}
 
 export const AddFragment = atom(null, (_, set, index?: number) => {
   const newFragment = {

@@ -1,23 +1,28 @@
 import { Button } from "@/components/ui/button";
 import { FastForward, Play } from "lucide-react";
-import { useAtom } from "jotai";
+import { useAtom, useAtomValue } from "jotai";
 import { GlobalSelect } from "./CodeFragment";
 import { useRunCode } from "@/lib/hooks/useRunCode";
+import { getNextFragment } from "@/lib/utils";
+import { FragmentsAtom } from "./CodeContent";
 
 export default function ToolsBar() {
   const runCode = useRunCode();
-  const [index, setIndex] = useAtom(GlobalSelect);
+  const [uuid, setUuid] = useAtom(GlobalSelect);
+  const fragments = useAtomValue(FragmentsAtom);
 
   const run = () => {
-    if (index === undefined) return;
-    runCode(index);
+    if (uuid === undefined) return;
+    runCode(uuid);
   };
 
   const runNext = () => {
-    if (index === undefined) return;
-    const newIndex = index + 1;
-    setIndex(newIndex);
-    runCode(newIndex);
+    if (uuid === undefined) return;
+    const nextFragment = getNextFragment(fragments, uuid);
+    if (!nextFragment.fragment) return;
+
+    setUuid(nextFragment.fragment.uuid);
+    runCode(nextFragment.fragment.uuid);
   };
 
   return (

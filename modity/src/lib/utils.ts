@@ -4,6 +4,7 @@ import { astDereferencer, ExtendedNodeTypeMap, findAll } from "solidity-ast/util
 import { twMerge } from "tailwind-merge"
 import { CompiledContract } from "./types";
 import { FunctionCall, TypeDescriptions } from "solidity-ast";
+import { FragmentData } from "@/components/CodeContent";
 
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs))
@@ -86,8 +87,6 @@ export function searchInspectorType(node: ExtendedNodeTypeMap["ContractDefinitio
 
 /**
  * Get the run function and the contract node
- * @param compiled 
- * @returns {contractNode, functionNode}
  */
 export function getRunFunction(compiled: CompiledContract) {
   const deref = astDereferencer(compiled)
@@ -97,4 +96,9 @@ export function getRunFunction(compiled: CompiledContract) {
   const functionNode = filterNode(findAll("FunctionDefinition", contract), (node) => node.name === "run")!
 
   return { contractNode: node, functionNode: functionNode }
+}
+
+export function getNextFragment(fragments: FragmentData[], uuid: string) {
+  const index = fragments.findIndex((fragment) => fragment.uuid === uuid);
+  return { index, fragment: fragments[index + 1] };
 }

@@ -17,7 +17,7 @@ const App: React.FC = () => {
 
       </div>
       <Footer />
-      <DevTools />
+      {/* <DevTools /> */}
     </div>
   );
 };

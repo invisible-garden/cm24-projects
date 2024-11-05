@@ -1,4 +1,5 @@
-import { FragmentData, FragmentsAtom, FragmentSnapshot, FragmentsSnapshot, LastFragmentSnapshot, RunIndexAtom, RunnedStatus } from "@/components/CodeContent";
+import { produce } from "immer";
+import { FragmentData, FragmentsAtom, FragmentSnapshot, FragmentsSnapshot, getCurrentFragment, LastFragmentSnapshot, RunIndexAtom } from "@/components/CodeContent";
 import { useAtomCallback } from "jotai/utils";
 import { useCallback } from "react";
 import { Source } from "../source";
@@ -12,21 +13,25 @@ function getSource(fragment?:FragmentSnapshot){
 
 export const useRunCode = () => {
   return useAtomCallback(
-    useCallback(async (get, set, index?: number) => {
-      if (index === undefined) return;
+    useCallback(async (get, set, uuid?: string) => {
+      if (uuid === undefined) return;
       const fragments = get(FragmentsAtom);
       const lastFragment = get(LastFragmentSnapshot);
       const runIndex = get(RunIndexAtom);
-      const fragment = fragments[index];
-      const setFragment = (index: number, cb: (draft: FragmentData) => void) => {
-        set(FragmentsAtom, (draft) => {
-          cb(draft[index]);
-        });
-      }
+      const fragment = getCurrentFragment(fragments, uuid)!;
+      const updateCurrentFragment = (cb: (draft: FragmentData) => void) => {
+        set(FragmentsAtom, (prev) => 
+          produce(prev, (draft: FragmentData[]) => {
+            const fragment = draft.find((v) => v.uuid === uuid)!;
+            cb(fragment);
+          })
+        );
+      };
+      
       // 重建已经运行过的段的souce
       const source = getSource(lastFragment);
 
-      setFragment(index, (draft) => {
+      updateCurrentFragment((draft) => {
         draft.result = undefined;
         draft.error = undefined;
       })
@@ -51,28 +56,27 @@ export const useRunCode = () => {
           variableMeta!
         ) : {} as DecodeVariableResult;
 
-        set(FragmentsAtom, (draft) => {
-          const fragment = draft[index];
-          fragment.result = {variable, value};
+        updateCurrentFragment((draft) => {
+          draft.result = {variable, value};
 
-          if (!fragment.detailCode) fragment.detailCode = {}
+          if (!draft.detailCode) draft.detailCode = {}
           switch (type) {
             case SourceType.VariableDeclaration:
-              fragment.detailCode!.runnableCode = codes.slice(0, -1).join("\n");
+              draft.detailCode!.runnableCode = codes.slice(0, -1).join("\n");
               break;
             case SourceType.Normal:
-              fragment.detailCode!.runnableCode = fragment.code;
+              draft.detailCode!.runnableCode = draft.code;
               break;
           }
-          fragment.runIndex = runIndex;
+          draft.runIndex = runIndex;
           set(RunIndexAtom, runIndex + 1);
-          set(FragmentsSnapshot, (draft) => {
-            return [...draft, {
-              ...fragment,
+          set(FragmentsSnapshot, (draftSnapshots) => {
+            return [...draftSnapshots, {
+              ...draft,
               source: newSource
             }]
           })
-          const scrollTo = fragment.scrollTo;
+          const scrollTo = draft.scrollTo;
           setTimeout(()=>{
             scrollTo?.();
           },10);
@@ -80,8 +84,8 @@ export const useRunCode = () => {
       } catch (e: unknown) {
         console.log("error", e);
         if ((e as CompiledContract).errors) {
-          set(FragmentsAtom, (draft) => {
-            draft[index].error = (e as CompiledContract).errors;
+          updateCurrentFragment((draft) => {
+            draft.error = (e as CompiledContract).errors;
           });
         }
       }
