@@ -20,8 +20,6 @@ Moodle Web3 is a ready-to-deploy learning management system (LMS) that seamlessl
   - [📚 Lessons Learned](#-lessons-learned)
   - [🔗 Project Links](#-project-links)
   - [🎥 Video Demo](#-video-demo)
-  - [🔗 Project Links](#-project-links-1)
-  - [🎥 Video Demo](#-video-demo-1)
 
 ## 👥 Team Information
 ### Project Members
@@ -87,8 +85,8 @@ By integrating web3 elements like wallet logins, NFT certifications, and decentr
 
 ## 🏆 Sponsors
 These organizations support the Moodle Web3 project:
-- Push Protocol
-- PSE
+- Push Protocol ✅
+- PSE ✅
 
 ## 🎯 Project Goals
 - **Objective:** Develop a comprehensive plugin and integration suite connecting Moodle LMS with blockchain tools to offer decentralized identity and credentialing.
@@ -99,20 +97,8 @@ These organizations support the Moodle Web3 project:
 
 ## 📚 Lessons Learned
 - **Best Practices:** Include reusable code patterns to aid other developers in similar projects.
+- **Integration**: Web3 Tools integrations with Web2 Robust platforms
 - **Notable Code Snippets:** Share examples to showcase key insights for building decentralized applications in educational contexts.
-
-## 🔗 Project Links
-Explore Moodle Web3:
-- Moodle Web3 Repository
-- Source Code - Custom Moodle
-- Source Code - Certifications Smart Contract
-- Source Code - Middleware Webserver and DB
-- Docker Image - Middleware Webserver and DB
-
-## 🎥 Video Demo
-Watch our Demo Video — A brief (5-minute max) demonstration of Moodle Web3, including team introductions and project highlights.
-
----
 
 ## 🔗 Project Links
 
@@ -122,6 +108,7 @@ Provide links to:
 - [Source Code - Certifications Smart Contract](https://github.com/padimaster/certifications-smart-contract)
 - [Source Code - Middleware Webserver and DB](https://github.com/padimaster/moodle-web3)
 - [Docker Image - Middleware Webserver and DB](https://hub.docker.com/repository/docker/padimaster/moodle-push/general)
+- [Source Code - Moodle Wallet Integration]()
 
 ---
 
