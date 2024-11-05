@@ -231,4 +231,4 @@ We put our demo on folder `notebook`, it contain 3 ipynb files:
 
 ## Video Demo (For Submission)
 
-Please provide a link to a video demo of your project. The demo should be no longer than 5 minutes and should include a brief intro to your team and your project.
+[Video demo](https://youtu.be/3TNkV1Ger9U)
