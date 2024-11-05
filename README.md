@@ -72,6 +72,9 @@ Moodle Web3 combines Moodle LMS functionalities with blockchain technology, deli
 - NFT Certifications & POAPs: Students receive NFTs as proof of course completions, creating verifiable, tamper-proof digital credentials.
 - Smart Contract for Certifications: Deploys an ERC721 smart contract, issuing unique NFTs as certifications, accessible within students' Ethereum wallets.
 
+<img width="405" alt="image" src="https://github.com/user-attachments/assets/a9048b92-1e4f-4408-a8d1-4c865a4f5e3b">
+
+
 ## 🌐 Web3 Integration Benefits
 Moodle Web3 leverages blockchain technology to enhance educational accessibility, engagement, and credential security. This integration exemplifies the tangible benefits of blockchain in real-world scenarios.
 
