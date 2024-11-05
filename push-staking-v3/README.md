@@ -1,7 +1,7 @@
 # PUSH STAKING V3
 
 In the current live version of the Push Protocol, staking for token holders is enabled within `PushCoreV2.sol`. The `PushCoreV2.sol` contract incorporates several streams of functionality: channel management, notifications management, fees collection as well as staking.
-The new `Push Staking V3` feature will move staking into a dedicated contract and will extend staking capabilities to protocol integrator wallets alongside token holders. In the new `PushStaking.sol` contract, incoming staking rewards are separated into 2 pools, one for token holder rewards and one for wallet integrator rewards. Wallet integrators are added / removed to the contract via governance votes.
+The new `Push Staking V3` feature will move staking into a dedicated contract and will extend staking capabilities to protocol integrator wallets alongside token holders. In the new `PushStaking.sol` contract, incoming staking rewards are separated into 2 pools, one for token holder rewards and one for wallet integrator rewards. Protocol integrator wallets are added / removed to the contract via governance votes.
 
 ## Team Information
 
