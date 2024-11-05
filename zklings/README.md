@@ -12,37 +12,37 @@ Currently, we have included exercises in various topics in zero-knowledge proof 
   - Discord Username: b.bbbb
   - Devfolio Username: bierbbbb
   - Github Username: badgooooor
-  - Role: {Role}
+  - Role: Contributor
 
 - Name: John Kaller
   - Discord Username: ownerofjk
   - Devfolio Username: ownerofjk
   - Github Username: OwnerOfJK
-  - Role: {Role}
+  - Role: Contributor
 
 - Name: Qinghao Huang
   - Discord Username: perturbation_theory
   - Devfolio Username: wfnuser
   - Github Username: wfnuser
-  - Role: {Role}
+  - Role: Contributor
 
 - Name: Alok Kumar
   - Discord Username: surfer_05
   - Devfolio Username: surfer_05
   - Github Username: surfer05
-  - Role: {Role}
+  - Role: Contributor
 
 - Name: Harold Lee
   - Discord Username: haroldgin931
   - Devfolio Username: HaroldGin931
   - Github Username: HaroldGin931
-  - Role: {Role}
+  - Role: Contributor
 
 - Name: Kenil Shah
   - Discord Username: kenilshahh
   - Devfolio Username: kenilshahh
   - Github Username: KENILSHAHH
-  - Role: {Role}
+  - Role: Contributor
 
 ## Technical Approach
 
@@ -52,15 +52,12 @@ Currently, we have included exercises in various topics in zero-knowledge proof 
   - [ ] Smart Contracts
   - [x] ZK Circuits
   - [ ] Machine Learning (ML)
-
-- High-level outline of the main technical components, tech you used and approaches used in the project.
-
 - Use Rust for implementing terminal GUI, controlling exercises and exercise checking process
-- For exercises, we have exercises that use these langauges
+- For exercises, we have exercises that use these languages/libraries:
   - Rust
   - circom
+  - Plonky3
 - Use commands from snarkjs for compiling, generating proof and verifying for checking circuit-related exercises
-
 
 ## Sponsors (if applicable)
 
@@ -78,21 +75,26 @@ If you are applying for a sponsor project idea or grant, select the sponsors bel
 
 ## What do you plan to achieve with your project?
 
-What is the plan for this project from now on? Do you plan to continue to work on it? Do you want some help? How could we help you?
+We would like for zklings to become the go to repository for anyone that intends to practically learn about ZKPs that is contributor-driven and open source. Moving forward we aim to:
+Continuously add and curate more exercises to keep up with the latest development in the field of ZKPs, that include (but not exclusive to):
+- Explore on designing exercises with other toolchain e.g. [plonky3](https://github.com/Plonky3/Plonky3)
+- Improving user experience on exercises e.g. making CLI flow automatic running more usable, showing progress on checking (or test if some exercises requires)
+- Explore on designing exercises with other toolchain e.g. [plonky3](https://github.com/Plonky3/Plonky3)
 
 ## Lessons Learned (For Submission)
 
-- What are the most important takeaways from your project?
-- Are there any patterns or best practices that you've learned that would be useful for other projects?
-- Highlight reusable code patterns, key code snippets, and best practices - what are some of the ‘lego bricks’ you’ve built, and how could someone else best use them?
+**Exercises**
+- We've learned more on theory in order to design a good exercises
+
+**Prove generation/verification process in exercise**
+- Code patterns on checking circuit-related exercise, the pattern is actually able to adjust parameters e.g. power of tau in order to serve exercises that requires larger ceremony. Also good as base for exercise that use different implementation. [(Reference)](https://github.com/rutefig/zklings/blob/58971f54e113bc20dd1239dc5e47f6004cfe510a/src/exercise.rs)
+- Learned on adjusting parameters used for proving circuit for right context. Current exercise circuits are more of smaller ones so using less power e.g. `9` to `10` which is good enough, this also benefits on feedback loop of exercise since proving process will be much faster. (currently it takes est. 10s compared to documentation which takes est. 40s.).
+- The implementation in repository is lagged from forked repository and some functionality are not working e.g. watching files. We tried to update codebase on that part to catch up main repository and researched more on improving it.
 
 ## Project Links (For Submission)
 
-Please provide links for the project repo and to any relevant documentation, code, or other resources that you've used in your project.
-
 Code repository : https://github.com/rutefig/zklings
-
 
 ## Video Demo (For Submission)
 
-Please provide a link to a video demo of your project. The demo should be no longer than 5 minutes.
+Youtube video : https://youtu.be/2feA0v-rtq8
