@@ -6,7 +6,6 @@ We are engage in collaborative research on various topics related to next-genera
 ## Team Information
 
 
-
 **Project Members**
 
 - Name: {Full Name}
@@ -26,20 +25,6 @@ We are engage in collaborative research on various topics related to next-genera
 
 - High-level outline of the main technical components, tech you used and approaches used in the project.
 
-
-## What do you plan to achieve with your project?
-
-What is the plan for this project from now on? Do you plan to continue to work on it? Do you want some help? How could we help you?
-
-## Lessons Learned (For Submission)
-
-- What are the most important takeaways from your project?
-- Are there any patterns or best practices that you've learned that would be useful for other projects?
-- Highlight reusable code patterns, key code snippets, and best practices - what are some of the ‘lego bricks’ you’ve built, and how could someone else best use them?
-
-## Project Links (For Submission)
-
-Please provide links for the project repo and to any relevant documentation, code, or other resources that you've used in your project.
 
 ## Video Demo (For Submission)
 
