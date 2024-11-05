@@ -83,8 +83,10 @@ Continuously add and curate more exercises to keep up with the latest developmen
 
 ## Lessons Learned (For Submission)
 
-**Exercises**
-- We've learned more on theory in order to design a good exercises
+**Exercises design**
+- In general, We learned more on theory in order to design a good exercises
+- Debugging protocols is challenging; it’s essential to print intermediate variables and use assertions to ensure the protocol behaves as expected.
+- Learned different hash fields that we can use in plonky3 and make our own proof, created an example using mersenne31 hash field, along with keccak256. [(Reference)](https://github.com/rutefig/zklings/pull/11)
 
 **Prove generation/verification process in exercise**
 - Code patterns on checking circuit-related exercise, the pattern is actually able to adjust parameters e.g. power of tau in order to serve exercises that requires larger ceremony. Also good as base for exercise that use different implementation. [(Reference)](https://github.com/rutefig/zklings/blob/58971f54e113bc20dd1239dc5e47f6004cfe510a/src/exercise.rs)
