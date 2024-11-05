@@ -43,7 +43,7 @@ zk-Biometric Authentication using Voiceprint, an alternative to the not-private 
 
 1. Our first approach was including four components plus a couple side cars:
 
-![First approach diagram](https://github.com/Privacy-Lab-Latam-Builders/voizk-ML/blob/main/img/firstapproach.jpg?raw=true)
+![First approach diagram](https://github.com/Privacy-Lab-Latam-Builders/voizk-ML/blob/main/img/firstapproach.png?raw=true)
 
 1) Pre-processing of the raw data with feature extraction 
 2) Two ML models to actually consume the pre-processed data and provide meaningful prediction
