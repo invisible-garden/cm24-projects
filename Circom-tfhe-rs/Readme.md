@@ -91,6 +91,7 @@ You can run these examples by following the instructions in the root directory.
 ```bash
 # Go back to the root directory of circom-tfhe-rs
 cd ..
+mkdir outputs
 python main.py {circuit_name}
 ```
 - `{circuit_name}` is the name of the circuit you want to run. Can either be `ops_tests` or `naive_search`.
