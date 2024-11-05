@@ -52,6 +52,11 @@ We are engage in collaborative research on various topics related to next-genera
   - Devfolio Username: jadexie
   - Github Username: wenjin1997
 
+- Name: Youlong Ding
+  - Discord Username: Youlong Ding
+  - Devfolio Username: Youlong Ding
+  - Github Username: YoulongDing
+
 ## Technical Approac
 
 - **Components** (Select all that apply)
