@@ -98,8 +98,8 @@ The project focuses on enhancing the security and privacy of eSIM management in 
 
 #### Summary
 This high-level outline captures the key technical components, technologies, and approaches utilized in your project that integrates zero-knowledge proofs with eSIM management and Remote SIM Provisioning. The focus on decentralization, privacy, and establishing a robust chain of trust positions this project as a significant advancement in secure digital certificate management within modern telecommunications.
----
 
+---
 # Sponsors (if applicable)
 If you are applying for a sponsor project idea or grant, select the sponsors below.
 
