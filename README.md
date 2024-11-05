@@ -1,5 +1,61 @@
 # PrivacyVisa
 
+PrivacyVisa is a secure payment solution that utilizes zero-knowledge proofs (ZKPs) to protect cardholder privacy. By enabling transactions without exposing sensitive information such as card numbers and CVV codes, PrivacyVisa ensures that merchants can process payments without accessing or storing critical cardholder details. This innovative approach minimizes fraud risk and enhances privacy, offering a safer alternative for secure transactions.
+
+## Team Information
+
+**Project Members**
+
+- Name: {Full Name}
+  - Discord Username: {username}
+  - Devfolio Username: {username}
+  - Github Username: {username}
+  - Role: {Role}
+
+
+## Technical Approach
+
+- **Components** (Select all that apply)
+  - [X] Frontend
+  - [X] Backend
+  - [ ] Smart Contracts
+  - [X] ZK Circuits
+  - [ ] Machine Learning (ML)
+
+- High-level outline of the main technical components, tech you used and approaches used in the project.
+
+## Sponsors (if applicable)
+
+If you are applying for a sponsor project idea or grant, select the sponsors below.
+
+- [ ] Push Protocol
+- [ ] Polygon
+- [ ] Chainlink
+- [ ] Brevis
+- [ ] Orbiter
+- [ ] ZKM
+- [ ] Nethermind
+- [ ] PSE
+- [ ] AltLayer
+
+## What do you plan to achieve with your project?
+
+What is the plan for this project from now on? Do you plan to continue to work on it? Do you want some help? How could we help you?
+
+## Lessons Learned (For Submission)
+
+- What are the most important takeaways from your project?
+- Are there any patterns or best practices that you've learned that would be useful for other projects?
+- Highlight reusable code patterns, key code snippets, and best practices - what are some of the ‘lego bricks’ you’ve built, and how could someone else best use them?
+
+## Project Links (For Submission)
+
+Github Link: https://github.com/PrivacyVisa/PrivacyVisa-POC
+
+## Video Demo (For Submission)
+
+Youtube: https://www.youtube.com/watch?v=5u7ukwcUM7s
+
 ## Overview
 
 Problem: Traditionally, cardholders must trust merchants to protect sensitive card information, including card numbers and CVV codes. However, many shops don’t use secure payment gateways, creating potential vulnerabilities.
