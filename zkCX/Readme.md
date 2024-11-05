@@ -14,12 +14,15 @@ Project Members
 - Devfolio Username: {DungeoN}
 - Github Username: {ArpitxGit}
 - Role: {Developer}
-#### Name: {Full Name}
-- Discord Username: {username}
-- Devfolio Username: {username}
-- Github Username: {username}
-- Role: {Role}
-#### Name: {Full Name}
+
+
+- Name: {Manul Singh Parihar}
+- Discord Username: {jeremy_connor}
+- Devfolio Username: {jeremy_connor}
+- Github Username: {ManulParihar}
+- Role: {Developer}
+
+- Name: {Full Name}
 - Discord Username: {username}
 - Devfolio Username: {username}
 - Github Username: {username}
