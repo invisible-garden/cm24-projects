@@ -111,10 +111,9 @@ Provide links to:
 - [Source Code - Certifications Smart Contract](https://github.com/padimaster/certifications-smart-contract)
 - [Source Code - Middleware Webserver and DB](https://github.com/padimaster/moodle-web3)
 - [Docker Image - Middleware Webserver and DB](https://hub.docker.com/repository/docker/padimaster/moodle-push/general)
-- [Source Code - Moodle Wallet Integration]()
+- [Source Code - Moodle Wallet Integration](https://github.com/Privacy-Lab-Latam-Builders/moodle/tree/login-web3)
 
 ---
 
 ## 🎥 Video Demo
-
-Include a link to a brief demo video (maximum 5 minutes) showcasing your team and project.
+- [Project Link](https://drive.google.com/file/d/16QDBZkYUcWrg9GUskHmjDM-x9thgpFey/view?usp=sharing)
