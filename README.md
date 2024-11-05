@@ -7,16 +7,25 @@
 ---
 
 ## 📋 Table of Contents
-- [Team Information](#team-information)
-- [Technical Approach](#technical-approach)
-- [High-Level Outline](#high-level-outline)
-- [Web3 Integration Benefits](#web3-integration-benefits)
-- [Transforming Education with Web3](#transforming-education-with-web3)
-- [Sponsors](#sponsors)
-- [Project Goals](#project-goals)
-- [Lessons Learned](#lessons-learned)
-- [Project Links](#project-links)
-- [Video Demo](#video-demo)
+- [Moodle Web3](#moodle-web3)
+  - [📋 Table of Contents](#-table-of-contents)
+  - [👥 Team Information](#-team-information)
+    - [Project Members](#project-members)
+  - [🛠 Technical Approach](#-technical-approach)
+    - [Components](#components)
+  - [🗺 High-Level Outline](#-high-level-outline)
+    - [Moodle Components](#moodle-components)
+    - [Middleware Web Server](#middleware-web-server)
+    - [Middleware Web Server](#middleware-web-server-1)
+    - [Ethereum Wallet Integration](#ethereum-wallet-integration)
+  - [🌐 Web3 Integration Benefits](#-web3-integration-benefits)
+  - [🌟 Transforming Education with Web3](#-transforming-education-with-web3)
+  - [🏆 Sponsors](#-sponsors)
+  - [🎯 Project Goals](#-project-goals)
+  - [📚 Lessons Learned](#-lessons-learned)
+    - [Key Takeaways:](#key-takeaways)
+  - [🔗 Project Links](#-project-links)
+  - [🎥 Video Demo](#-video-demo)
 
 ---
 
@@ -24,9 +33,15 @@
 
 ### Project Members
 - **Name:** Alex Padilla (@padimaster)
+  - **Discord:** [padimaster](https://github.com/padimaster)
   - **Discord:** padimasterec
   - **Devfolio:** padimasterec
-  - **Role:** CEO
+  - **Role:** Project Lead / Fullstack Developer
+  - **Contributions**
+    - **API Middleware**: Developed API to connect Moodle with Push Protocol for automated, event-based notifications (e.g., user enrollments, course completions).
+    - **Smart Contract Factory**: Created contracts to issue NFT certifications directly to students' Ethereum wallets.
+    - **Push Protocol Integration**: Set up automatic group creation and event-driven notifications for each course.
+    - **Scalable Server Configuration**: Configured a Docker-based setup for seamless deployment.
 
 - **Name:** Paul Rodas
   - **GitHub:** [0xarcano](https://github.com/0xarcano)
@@ -40,7 +55,7 @@
     - Created Docker configuration for Moodle deployment automation
 
 - **Name:** Carlos Jimenez
-  - **GitHub:** [0xarcano](https://github.com/cijimenez)
+  - **GitHub:** [cijimenez](https://github.com/cijimenez)
   - **Discord:** carlos_israelj
   - **Devfolio:** carlos_israelj
   - **Role:** Developer
@@ -56,7 +71,7 @@
 ### Components
 - **Frontend:** ✅
 - **Backend:** ✅
-- **Smart Contracts:** ❌
+- **Smart Contracts:** ✅
 - **ZK Circuits:** ❌
 - **Machine Learning (ML):** ❌
 
@@ -73,10 +88,17 @@
 ### Middleware Web Server
 - **Event-Driven Middleware**: Bridges Moodle and Push Protocol, capturing and triggering events such as course enrollments and completions.
 - **Push Protocol Integration**: Delivers real-time notifications for new content, assignment deadlines, and other updates, engaging students with blockchain-enabled communication.
+### Middleware Web Server
+- **Event-Driven Middleware**: Acts as a bridge between Moodle and Push Protocol, capturing key events like course enrollments and completions and triggering notifications accordingly.
+- **Push Protocol Integration**: Sends real-time notifications for content updates, assignment deadlines, and other important alerts, keeping students engaged through blockchain-enabled communication.
+- **Custom ERC721 Certification System**: Implements a Smart Contract Factory that generates a unique ERC721 contract for each course. This allows verified students to receive a custom NFT certification upon course completion, creating a verifiable, blockchain-secured record of their achievements. Each certificate is unique, securely stored on the blockchain, and accessible in the students' Ethereum wallets, showcasing their accomplishments in a tamper-proof, digital format.
+
 
 ### Ethereum Wallet Integration
 - **Web3 Login**: Secure login using Ethereum wallets.
 - **Certifications and POAPs**: Course completions rewarded with NFT certifications and POAPs directly in student wallets.
+
+
 
 ---
 
@@ -102,14 +124,7 @@
 If applicable, select the sponsors involved in supporting the project.
 
 - [x] Push Protocol
-- [ ] Polygon
-- [ ] Chainlink
-- [ ] Brevis
-- [ ] Orbiter
-- [ ] ZKM
-- [ ] Nethermind
-- [ ] PSE
-- [ ] AltLayer
+- [X] PSE
 
 ---
 
@@ -138,9 +153,10 @@ Support through technical development, feedback, or sponsorship is welcomed to a
 ## 🔗 Project Links
 
 Provide links to:
-- [Documentation]()
-- [Source Code]()
-- [Additional Resources]()
+- [Moodle Web3 Repository](https://github.com/Privacy-Lab-Latam-Builders/moodle-web3)
+- [Source Code - Certifications Smart Contract](https://github.com/padimaster/certifications-smart-contract)
+- [Source Code - Middleware Webserver and DB](https://github.com/padimaster/moodle-web3)
+- [Docker Image - Middleware Webserver and DB](https://hub.docker.com/repository/docker/padimaster/moodle-push/general)
 
 ---
 
