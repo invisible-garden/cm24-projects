@@ -9,11 +9,12 @@
 ## Team Information
 Project Members
 
-Name: {ARPIT KUMAR}
-Discord Username: {dungeon_master4227}
-Devfolio Username: {DunegoN}
-Github Username: {ArpitxGit}
-Role: {Developer}
+1.
+- Name: {ARPIT KUMAR}
+- Discord Username: {dungeon_master4227}
+- Devfolio Username: {DunegoN}
+- Github Username: {ArpitxGit}
+- Role: {Developer}
 
 
 ## Technical Approach
