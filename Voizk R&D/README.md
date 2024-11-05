@@ -43,7 +43,7 @@ zk-Biometric Authentication using Voiceprint, an alternative to the not-private 
 
 1. Our first approach was including four components plus a couple side cars:
 
-![First approach diagram](https://github.com/Privacy-Lab-Latam-Builders/voizk-ML/blob/docs/outline/img/firstapproach.jpg?raw=true)
+![First approach diagram](https://github.com/Privacy-Lab-Latam-Builders/voizk-ML/blob/main/img/firstapproach.jpg?raw=true)
 
 1) Pre-processing of the raw data with feature extraction 
 2) Two ML models to actually consume the pre-processed data and provide meaningful prediction
@@ -57,7 +57,7 @@ The first wall is hit on ZKVMs: If we cannot verify pre-processing we already ca
 
 2. Pretrained inference and proof
 
-![Second approach diagram](https://github.com/Privacy-Lab-Latam-Builders/voizk-ML/blob/docs/outline/img/secondapproach.jpg?raw=true)
+![Second approach diagram](https://github.com/Privacy-Lab-Latam-Builders/voizk-ML/blob/main/img/secondapproach.jpg?raw=true)
 
 After our first approach failed we tried to find ML tools to process raw sound. There are networks trained on VoxCeleb dataset which could be used in our fun example, also some speech-to-text models. In our second approach we though of building a system with three main components:
 1) A model for identifying the speaker (RawNet3)
