@@ -47,8 +47,11 @@ Secure Sharing: The user sends PI2 and PI3 (but not the actual card number or CV
 
     
 Initiate Payment: When the user wants to make a purchase, the shop sends the transaction details (TX number and amount) to both the bank and the user.
+
 Nonce Generation: The bank generates a “nonce” (a one-time, random value) and sends it to the user. This nonce is unique to the transaction, preventing replay attacks.
+
 Generate Proofs: The user combines the card number, salt, CVV, and transaction data to create two new values, PIA and PIB:
+
 *   PIA: A hashed combination of PI1 (card number hash), salt, and CVV.
 *   PIB: A hash of PIA combined with the transaction number and nonce.
 Verification by Bank: The user sends both PIA and PIB to the bank.
