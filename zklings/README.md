@@ -99,4 +99,4 @@ Code repository : https://github.com/rutefig/zklings
 
 ## Video Demo (For Submission)
 
-Youtube video : https://youtu.be/2feA0v-rtq8
+Youtube video : https://youtu.be/xNhUFourpII
