@@ -12,7 +12,33 @@ We are engage in collaborative research on various topics related to next-genera
   - Discord Username: 8films
   - Devfolio Username: 8films
   - Github Username: eightfilms
-  - Role: researcher
+
+
+- Name: Juno Chiu
+  - Discord Username: junochiu
+  - Devfolio Username: junochiu
+  - Github Username: junochiu
+
+- Name: Eric
+  - Discord Username: {0xxeric_44046}
+  - Devfolio Username: {0xxEric}
+  - Github Username:{0xxEric}
+  
+- Name: Pinhao Chen
+  - Discord Username: pinhaoc
+  - Devfolio Username: pinhao
+  - Github Username: pinhaoc
+  
+- Name: Jeff Chung
+  - Discord Username: foodchain1028
+  - Devfolio Username: jeffchung
+  - Github Username: FoodChain1028
+
+
+- Name: shuang wu
+  - Discord Username: shuang
+  - Devfolio Username: shuang wu
+  - Github Username:shuang121
 
 
 
