@@ -12,11 +12,20 @@ Moodle Web 3 is a "key on hand" learning management system (LMS) that integrates
   - Devfolio Username: padimasterec
   - Role: CEO
 
-- Name: Paul Rodas (@padimaster)
+- Name: Paul Rodas
 
-  - Discord Username: padimasterec
-  - Devfolio Username: padimasterec
-  - Role: CEO
+  - Github username: 0xarcano
+  - Discord Username: 0xarcano
+  - Devfolio Username: _arkno_
+  - Role: Senior Developer / DevOps
+  - Contributions: 
+    - Moodle PHP plugin to integrate with Push Protocol 
+      - Course event observer
+        - User enrollment event
+        - Course completion event
+        - Quiz submission event
+      - Course creation integration to trigger Push group creation
+    - Docker to automatize Moodle deployment
 
 - Name: Carlos Jimenez (@padimaster)
   - Discord Username: padimasterec
