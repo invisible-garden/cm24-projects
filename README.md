@@ -9,19 +9,24 @@ Solution: PrivacyVisa provides a secure alternative that prevents merchants from
 ## How It Works
 ![sequenceDiagram](./sequenceDiagram.png)
     
-1.Card Generation: Users generate a virtual credit card through PrivacyVisa, establishing a secure link with their bank.
-2.Shopping: When a user makes a purchase, the shop sends the necessary transaction information to both the bank and PrivacyVisa.
-3.Proof Generation: PrivacyVisa generates a ZKP that verifies the transaction’s authenticity without exposing the card number or CVV and sends it to the bank for verification.
-4.Verification: The bank verifies the proof and informs the shop, which then completes the transaction with the user.
+1. Card Generation: Users generate a virtual credit card through PrivacyVisa, establishing a secure link with their bank.
+
+2. Shopping: When a user makes a purchase, the shop sends the necessary transaction information to both the bank and PrivacyVisa.
+
+3. Proof Generation: PrivacyVisa generates a ZKP that verifies the transaction’s authenticity without exposing the card number or CVV and sends it to the bank for verification.
+
+4. Verification: The bank verifies the proof and informs the shop, which then completes the transaction with the user.
 
 Core Technology
-    •    Circom: Builds circuits for Zero-Knowledge Proofs, allowing PrivacyVisa to generate secure proofs without revealing any sensitive information.
-    •    SnarkJS: Compiles circuits, generates proofs, and efficiently verifies them. 
+*    Circom: Builds circuits for Zero-Knowledge Proofs, allowing PrivacyVisa to generate secure proofs without revealing any sensitive information.
+*    SnarkJS: Compiles circuits, generates proofs, and efficiently verifies them. 
+
 Next Steps
-1.PrivacyVisa Wallet: Develop a wallet to store salt and secrets securely for enhanced future protection.
-2.On-Chain Verifier: Build an on-chain verifier to support decentralized, transparent payment verification.
-3.zkVM Migration: Transition to a flexible zkVM, enhancing scalability with recursive proof support for complex computations.
-4.Proof Without Trusted Setup: Utilize Risc0 to support a wide range of zkVisa use cases without the need for a trusted setup.
+
+*    PrivacyVisa Wallet: Develop a wallet to store salt and secrets securely for enhanced future protection.
+*    On-Chain Verifier: Build an on-chain verifier to support decentralized, transparent payment verification.
+*    zkVM Migration: Transition to a flexible zkVM, enhancing scalability with recursive proof support for complex computations.
+*    Proof Without Trusted Setup: Utilize Risc0 to support a wide range of zkVisa use cases without the need for a trusted setup.
 
 ## For ZK part
 
