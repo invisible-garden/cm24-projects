@@ -2,10 +2,15 @@
 
 >
 >zkCX is an approach to remove the chain of trust from RSP,
->In the design of [OpenRSP](https://github.com/Blockchain-Powered-eSIM/OpenRSP)
+>
+>In the design of [OpenRSP](https://github.com/Blockchain-Powered-eSIM/OpenRSP).
+>
 >Introducing zero knowledge proofs for authentication by proving certificates to issuer who is also verifier.
->Everything about [Certificate Issuer(CI) and Improvements](https://github.com/GMMS-Labs/cm24-projects/blob/main/zkCX/CI_and_improvements.md)
->Evertyhing about [X.509 Overview](https://github.com/GMMS-Labs/cm24-projects/blob/main/zkCX/X509_overview.md) and [X.509 Drawbacks](https://github.com/GMMS-Labs/cm24-projects/blob/main/zkCX/X509_drawbacks.md)
+>
+>Everything about [Certificate Issuer(CI) and Improvements](https://github.com/GMMS-Labs/cm24-projects/blob/main/zkCX/CI_and_improvements.md).
+> 
+>Evertyhing about [X.509 Overview](https://github.com/GMMS-Labs/cm24-projects/blob/main/zkCX/X509_overview.md) and [X.509 Drawbacks](https://github.com/GMMS-Labs/cm24-projects/blob/main/zkCX/X509_drawbacks.md).
+>
 >Everything about current implemenatation [zkcx rust codebase](https://github.com/GMMS-Labs/cm24-projects/tree/main/zkCX/zkcx)
 >
 ---
