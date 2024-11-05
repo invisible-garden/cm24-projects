@@ -1,10 +1,5 @@
 # Moodle Web3
-
-**Moodle Web3** is a "key on hand" learning management system (LMS) that seamlessly integrates Moodle, one of the most widely used LMS platforms, with cutting-edge web3 tools. This includes an Ethereum wallet where users can receive certifications as NFTs, POAPs (Proof of Attendance Protocol tokens), and other digital assets. Utilizing Push Protocol notifications, Moodle Web3 offers an intuitive introduction to the web3 ecosystem, empowering educators and learners to interact with decentralized applications, manage digital assets securely, and stay informed with real-time updates. This platform bridges traditional education with web3 technology, enriching the learning experience and preparing users for the decentralized web.
-
-![Project Logo](./assets/imagen.jpg)
-
----
+Moodle Web3 is a ready-to-deploy learning management system (LMS) that seamlessly combines Moodle, one of the world’s most popular LMS platforms, with innovative web3 tools. This integration allows users to experience decentralized applications, manage digital assets securely, and stay informed through real-time notifications. Key features include an Ethereum wallet, enabling users to receive certifications as NFTs, POAPs (Proof of Attendance Protocol tokens), and other digital assets. Through Push Protocol notifications, Moodle Web3 enhances learning, bridging traditional education with the decentralized web to prepare users for the next generation of the internet.
 
 ## 📋 Table of Contents
 - [Moodle Web3](#moodle-web3)
@@ -16,137 +11,106 @@
   - [🗺 High-Level Outline](#-high-level-outline)
     - [Moodle Components](#moodle-components)
     - [Middleware Web Server](#middleware-web-server)
-    - [Middleware Web Server](#middleware-web-server-1)
     - [Ethereum Wallet Integration](#ethereum-wallet-integration)
   - [🌐 Web3 Integration Benefits](#-web3-integration-benefits)
+    - [Key Benefits:](#key-benefits)
   - [🌟 Transforming Education with Web3](#-transforming-education-with-web3)
   - [🏆 Sponsors](#-sponsors)
   - [🎯 Project Goals](#-project-goals)
   - [📚 Lessons Learned](#-lessons-learned)
-    - [Key Takeaways:](#key-takeaways)
   - [🔗 Project Links](#-project-links)
   - [🎥 Video Demo](#-video-demo)
-
----
+  - [🔗 Project Links](#-project-links-1)
+  - [🎥 Video Demo](#-video-demo-1)
 
 ## 👥 Team Information
-
 ### Project Members
-- **Name:** Alex Padilla (@padimaster)
-  - **Discord:** [padimaster](https://github.com/padimaster)
-  - **Discord:** padimasterec
-  - **Devfolio:** padimasterec
-  - **Role:** Project Lead / Fullstack Developer
-  - **Contributions**
-    - **API Middleware**: Developed API to connect Moodle with Push Protocol for automated, event-based notifications (e.g., user enrollments, course completions).
-    - **Smart Contract Factory**: Created contracts to issue NFT certifications directly to students' Ethereum wallets.
-    - **Push Protocol Integration**: Set up automatic group creation and event-driven notifications for each course.
-    - **Scalable Server Configuration**: Configured a Docker-based setup for seamless deployment.
+**Name:** Alex Padilla (@padimaster)  
+**GitHub:** [padimaster](https://github.com/padimaster)  
+**Discord:** padimasterec  
+**Role:** Project Lead / Fullstack Developer  
+**Contributions:**
+- Developed the API Middleware to connect Moodle with Push Protocol for event-based notifications (e.g., user enrollments, course completions).
+- Created Smart Contract Factory to issue NFT certifications directly to students' Ethereum wallets.
+- Integrated Push Protocol with automated group creation and real-time notifications per course.
+- Configured a scalable Docker-based server for deployment.
 
-- **Name:** Paul Rodas
-  - **GitHub:** [0xarcano](https://github.com/0xarcano)
-  - **Discord:** 0xarcano
-  - **Devfolio:** _arkno_
-  - **Role:** Senior Developer / DevOps
-  - **Contributions:**
-    - Developed Moodle PHP plugin integrating with Push Protocol:
-      - Course event observer for user enrollment, course completion, and quiz submission
-      - Automated group creation for courses using Push Protocol
-    - Created Docker configuration for Moodle deployment automation
+**Name:** Paul Rodas  
+**GitHub:** [0xarcano](https://github.com/0xarcano)  
+**Discord:** 0xarcano  
+**Role:** Senior Developer / DevOps  
+**Contributions:**
+- Developed a Moodle PHP plugin for Push Protocol, enabling event-driven notifications for actions like course enrollments, completions, and quiz submissions.
+- Set up Docker configurations for streamlined Moodle deployment.
 
-- **Name:** Carlos Jimenez
-  - **GitHub:** [cijimenez](https://github.com/cijimenez)
-  - **Discord:** carlos_israelj
-  - **Devfolio:** carlos_israelj
-  - **Role:** Developer
-  - **Contributions:**
-    - Integrated Moodle with MetaMask:
-      - Login functionality using MetaMask
-      - User creation with wallet connection to Moodle's MariaDB database
-
----
+**Name:** Carlos Jimenez  
+**GitHub:** [cijimenez](https://github.com/cijimenez)  
+**Discord:** carlos_israelj  
+**Role:** Developer  
+**Contributions:**
+- Integrated Moodle with MetaMask for secure Web3 Login and user creation with wallet connections in Moodle’s database.
 
 ## 🛠 Technical Approach
-
 ### Components
-- **Frontend:** ✅
-- **Backend:** ✅
-- **Smart Contracts:** ✅
-- **ZK Circuits:** ❌
-- **Machine Learning (ML):** ❌
-
----
+- Frontend: ✅
+- Backend: ✅
+- Smart Contracts: ✅
+- ZK Circuits: ❌
+- Machine Learning (ML): ❌
 
 ## 🗺 High-Level Outline
-
-**Moodle Web3** combines the strengths of Moodle LMS with blockchain technology to build a user-friendly, decentralized educational platform. This includes integration with Ethereum wallets and Push Protocol to facilitate global blockchain adoption.
+Moodle Web3 combines Moodle LMS functionalities with blockchain technology, delivering a user-friendly, decentralized educational platform. It integrates Ethereum wallets and Push Protocol to promote blockchain adoption through interactive educational use cases.
 
 ### Moodle Components
-- **Moodle Server**: Facilitates course management and user engagement.
-- **Moodle Database**: Stores user, course, and event data securely.
+- Custom Moodle LMS: Manages courses, students, and data within a decentralized framework.
+- Moodle Database: Stores user, course, and event information, with modifications to support web3 functionalities.
 
 ### Middleware Web Server
-- **Event-Driven Middleware**: Bridges Moodle and Push Protocol, capturing and triggering events such as course enrollments and completions.
-- **Push Protocol Integration**: Delivers real-time notifications for new content, assignment deadlines, and other updates, engaging students with blockchain-enabled communication.
-### Middleware Web Server
-- **Event-Driven Middleware**: Acts as a bridge between Moodle and Push Protocol, capturing key events like course enrollments and completions and triggering notifications accordingly.
-- **Push Protocol Integration**: Sends real-time notifications for content updates, assignment deadlines, and other important alerts, keeping students engaged through blockchain-enabled communication.
-- **Custom ERC721 Certification System**: Implements a Smart Contract Factory that generates a unique ERC721 contract for each course. This allows verified students to receive a custom NFT certification upon course completion, creating a verifiable, blockchain-secured record of their achievements. Each certificate is unique, securely stored on the blockchain, and accessible in the students' Ethereum wallets, showcasing their accomplishments in a tamper-proof, digital format.
-
+- Event-Driven Middleware: Links Moodle with Push Protocol to capture events (e.g., enrollments, course completions) and trigger notifications.
+- Push Protocol Integration: Enables real-time notifications for new content, deadlines, and updates, engaging students through blockchain-enabled messaging.
 
 ### Ethereum Wallet Integration
-- **Web3 Login**: Secure login using Ethereum wallets.
-- **Certifications and POAPs**: Course completions rewarded with NFT certifications and POAPs directly in student wallets.
-
-
-
----
+- Web3 Login: Allows students to log in using their Ethereum wallets, improving security and introducing blockchain credentials.
+- NFT Certifications & POAPs: Students receive NFTs as proof of course completions, creating verifiable, tamper-proof digital credentials.
+- Smart Contract for Certifications: Deploys an ERC721 smart contract, issuing unique NFTs as certifications, accessible within students' Ethereum wallets.
 
 ## 🌐 Web3 Integration Benefits
+Moodle Web3 leverages blockchain technology to enhance educational accessibility, engagement, and credential security. This integration exemplifies the tangible benefits of blockchain in real-world scenarios.
 
-**Moodle Web3**’s integration with Push Protocol and Ethereum wallets supports blockchain adoption through real-world educational use cases.
-
-**Key Benefits:**
-- **Enhanced Course Engagement**: Real-time notifications improve accessibility and retention.
-- **Secure, Decentralized Access**: Wallet-based logins offer additional security and introduce blockchain credentials.
-- **Verifiable Digital Credentials**: Students receive certificates as NFTs and POAPs, showcasing their achievements beyond the platform.
-
----
+### Key Benefits:
+- Increased Engagement: Real-time notifications through Push Protocol keep students updated, fostering higher engagement and retention.
+- Decentralized, Secure Access: Wallet-based logins enhance security while familiarizing users with blockchain-based identity management.
+- Verifiable Credentials: NFT-based certifications offer students an authenticated, tamper-proof record of their achievements.
 
 ## 🌟 Transforming Education with Web3
-
-**Moodle Web3** revolutionizes the LMS landscape by integrating web3 functionalities like wallet logins, NFT-based certifications, and decentralized notifications. This platform empowers students to explore and understand blockchain technology, fostering broader adoption.
-
----
+By integrating web3 elements like wallet logins, NFT certifications, and decentralized notifications, Moodle Web3 empowers students and educators to explore blockchain technology in a practical setting, promoting understanding and widespread adoption.
 
 ## 🏆 Sponsors
-
-If applicable, select the sponsors involved in supporting the project.
-
-- [x] Push Protocol
-- [X] PSE
-
----
+These organizations support the Moodle Web3 project:
+- Push Protocol
+- PSE
 
 ## 🎯 Project Goals
+- **Objective:** Develop a comprehensive plugin and integration suite connecting Moodle LMS with blockchain tools to offer decentralized identity and credentialing.
+- **Functionality Expansion:** Integrate real-time, blockchain-based notifications for a modernized learning experience.
+- **Long-Term Vision:** Expand Moodle Web3 into an educational tool that demonstrates the potential of web3, encouraging adoption by educational institutions seeking enhanced transparency and verifiability.
 
-- Develop a comprehensive plugin and integration suite to connect educators and learners with blockchain tools.
-- Expand functionalities to support decentralized identity and credentialing.
-- Enable real-time notifications using blockchain technology for a modernized learning experience.
-
-**Long-Term Vision:**
-Refine and expand the platform to showcase the potential of web3 in education, encouraging adoption by educational institutions for enhanced transparency and verifiability.
-
-**Collaborative Opportunities:**
-Support through technical development, feedback, or sponsorship is welcomed to accelerate progress and build partnerships.
-
----
+**Collaboration Opportunities:** Support for development, feedback, or sponsorship is encouraged to drive project growth and foster partnerships.
 
 ## 📚 Lessons Learned
+- **Best Practices:** Include reusable code patterns to aid other developers in similar projects.
+- **Notable Code Snippets:** Share examples to showcase key insights for building decentralized applications in educational contexts.
 
-### Key Takeaways:
-- **Patterns and Best Practices**: Include reusable code patterns and best practices for other projects.
-- **Notable Code Snippets**: Share examples and insights to help others leverage these 'lego bricks' in their projects.
+## 🔗 Project Links
+Explore Moodle Web3:
+- Moodle Web3 Repository
+- Source Code - Custom Moodle
+- Source Code - Certifications Smart Contract
+- Source Code - Middleware Webserver and DB
+- Docker Image - Middleware Webserver and DB
+
+## 🎥 Video Demo
+Watch our Demo Video — A brief (5-minute max) demonstration of Moodle Web3, including team introductions and project highlights.
 
 ---
 
@@ -154,6 +118,7 @@ Support through technical development, feedback, or sponsorship is welcomed to a
 
 Provide links to:
 - [Moodle Web3 Repository](https://github.com/Privacy-Lab-Latam-Builders/moodle-web3)
+- [Source Code - Custom Moodle](https://github.com/Privacy-Lab-Latam-Builders/moodle)
 - [Source Code - Certifications Smart Contract](https://github.com/padimaster/certifications-smart-contract)
 - [Source Code - Middleware Webserver and DB](https://github.com/padimaster/moodle-web3)
 - [Docker Image - Middleware Webserver and DB](https://hub.docker.com/repository/docker/padimaster/moodle-push/general)
