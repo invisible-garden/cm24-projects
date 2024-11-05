@@ -38,11 +38,17 @@ We are engage in collaborative research on various topics related to next-genera
 - Name: shuang wu
   - Discord Username: shuang
   - Devfolio Username: shuang wu
-  - Github Username:shuang121
+  - Github Username: shuang121
+
+
+- Name: Varun Thakore
+  - Discord Username: varunthakore
+  - Devfolio Username: varunthakore
+  - Github Username: varunthakore
 
 
 
-## Technical Approach
+## Technical Approac
 
 - **Components** (Select all that apply)
   - [ ] Frontend
