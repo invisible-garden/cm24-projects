@@ -16,6 +16,18 @@ Project Members
 - Role: {Developer}
 
 
+- Name: {Full Name}
+- Discord Username: {username}
+- Devfolio Username: {username}
+- Github Username: {username}
+- Role: {Role}
+
+- Name: {Full Name}
+- Discord Username: {username}
+- Devfolio Username: {username}
+- Github Username: {username}
+- Role: {Role}
+
 ## Technical Approach
 Components (Select all that apply)
 
