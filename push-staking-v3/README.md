@@ -71,7 +71,7 @@ Link to my grant
    -  [PushCoreV3.sol](https://github.com/Mouzayan/push-staking/blob/v3-staking/contracts/PushCore/PushCoreV3.sol)
    -  [PushStaking.sol](https://github.com/Mouzayan/push-staking/blob/v3-staking/contracts/PushStaking/PushStaking.sol)
    -  [IPushStaking.sol](https://github.com/Mouzayan/push-staking/blob/v3-staking/contracts/interfaces/IPushStaking.sol)
-   - In progress, `npx hardhat test test/v3/PushStaking.test.js` to run. [PushStaking.test.js](https://github.com/Mouzayan/push-staking/blob/v3-staking/test/v3/PushStaking.test.js)
+   - Test are incomplete and in progress, `npx hardhat test test/v3/PushStaking.test.js` to run: [PushStaking.test.js](https://github.com/Mouzayan/push-staking/blob/v3-staking/test/v3/PushStaking.test.js)
 
 
 ## Video Demo (For Submission)
