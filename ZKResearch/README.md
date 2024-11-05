@@ -47,6 +47,10 @@ We are engage in collaborative research on various topics related to next-genera
   - Github Username: varunthakore
 
 
+- Name: Jade
+  - Discord Username: jadexie
+  - Devfolio Username: jadexie
+  - Github Username: wenjin1997
 
 ## Technical Approac
 
