@@ -62,4 +62,4 @@ If you are applying for a sponsor project idea or grant, select the sponsors bel
 
 ## Video Demo (For Submission)
 
-Please provide a link to a video demo of your project. The demo should be no longer than 5 minutes.
+- [Demo](https://www.youtube.com/watch?v=a41IlLXtYwM)
