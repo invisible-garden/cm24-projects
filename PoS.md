@@ -11,19 +11,26 @@ The project goal is implement the STIR into Plonky3, and implement the STIR Recu
   - Discord Username: 0xhhh
   - Devfolio Username: 0xhhh
   - Github Username: cyl19970726
-  - Role: leader 
+  - Role: engineer 
+
+- Name: 
+  - Discord Username: dylan_zk
+  - Devfolio Username: dylancai9
+  - Github Username:dylanCai9
+  - Role: core engineer
 
 - Name: Andrew0ngX
   - Discord Username: Andrew0ngX
   - Devfolio Username: Andrew0ngX
   - Github Username: wz14
-  - Role: engineer
+  - Role: core engineer
 
 - Name: Jade
   - Discord Username: jadexie
   - Devfolio Username: jadexie
   - Github Username: wenjin1997
   - Role: researcher
+
 ## Technical Approach
 
 - **Components** (Select all that apply)
