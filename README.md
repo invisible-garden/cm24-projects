@@ -19,7 +19,7 @@ This is a zero-knowledge proof-based cryptocurrency wallet project aimed at prov
   - [x] Frontend
   - [x] Backend
   - [] Smart Contracts
-  - [x] ZK Circuits
+  - [] ZK Circuits
   - [ ] Machine Learning (ML)
 
 - Overview of Key Technical Components:
@@ -45,10 +45,9 @@ If you are applying for a sponsor project idea or grant, select the sponsors bel
 ## What do you plan to achieve with your project?
 
 We plan to continue developing and refining this project:
-1. Optimize zero-knowledge proof circuit performance
-2. Add more wallet features
-3. Improve user experience
-4. Seek community feedback and contributions
+1. Add more wallet features
+2. Improve user experience
+3. Seek community feedback and contributions
 
 We welcome community members to participate in project development, especially in:
 - Code review and optimization suggestions
@@ -64,15 +63,17 @@ Key takeaways:
 - User privacy protection solution design
 
 Reusable patterns and best practices:
-- Zero-knowledge proof circuit design patterns
 - Frontend component architecture
 - API security implementation
 
 ## Project Links (For Submission)
 
 - Code Repository: https://github.com/anthhub/wallet-zk
+- Demo Website: https://wallet-zk.vercel.app/
+- Demo TG Bot: https://t.me/my_coin_mint_bot/mycoin
 - Technical Documentation: [Documentation Link]
-- Demo Website: [Website Link]
+
+
 
 ## Video Demo (For Submission)
 
