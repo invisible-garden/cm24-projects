@@ -1,68 +1,70 @@
-# circom-tfhe-rs
+# Circom-tfhe-rs
 
-circom-tfhe-rs allows parties to perform Multi-Party Computation (MPC) by writing Circom code using the tfhe-rs framework. Circom code is compiled into an arithmetic circuit and then translated gate by gate to the corresponding tfhe-rs operators. See the write-up to learn how it works (roughly) and the spec of inputs and outputs: [circom-tfhe-rs write-up](https://hackmd.io/Iuu9yge4ShKBjawAcmFjvw?view).
+Circom-tfhe-rs allows user to perform TFHE arithmetizations by writing CIrcom code using the zama's tfhe-rs framework. Circom code is compiled into an arithmetic circuit and then translated gate by gate to the corresponding tfhe-rs operators.
 
 **NOTE:** Now circom-2-arithc also conveniently outputs the Bristol format with corresponding circuit_info (hence the json_arbistol is not necessary anymore).
 
+
+
 ## Supported Circom Type and Op
 
-| Type            | Op                       | Supported |
-| --------------- | ------------------------ | :-------: |
-| **Int** (sint, cint)        | `+`      Addition           |    ✅     |
-|                 | `/`      Division            |    ✅     |
-|                 | `==`     Equality      |    ✅     |
-|                 | `>`      Greater Than      |    ✅     |
-|                 | `>=`     Greater Than or Equal        |    ✅     |
-|                 | `<`      Less Than            |    ✅     |
-|                 | `<=`     Less Than or Equal            |    ✅     |
-|                 | `*`   Multiplication     |    ✅     |
-|                 | `!=` Not Equal |    ✅     |
-|                 | `-`  Subtraction   |    ✅     |
-|                 | `**` Exponentiation               |    ✅     |
-|                 | `<<` Shift Left                |    ✅     |
-|                 | `>>` Shift Right                |    ✅     |
-|                 | `^`  Bitwise XOR               |    ❌     |
-|                 | `\|` Bitwise OR                |    ❌     |
-|                 | `&`  Bitwise AND               |    ❌     |
-|                 | `%`  Modulo               |    ❌     |
+| Type                 | Op                             | Supported |
+| -------------------- | ------------------------------ | :-------: |
+| **Int** (sint, cint) | `+`      Addition              |     ✅     |
+|                      | `/`      Division              |     ✅     |
+|                      | `==`     Equality              |     ✅     |
+|                      | `>`      Greater Than          |     ✅     |
+|                      | `>=`     Greater Than or Equal |     ✅     |
+|                      | `<`      Less Than             |     ✅     |
+|                      | `<=`     Less Than or Equal    |     ✅     |
+|                      | `*`   Multiplication           |     ✅     |
+|                      | `!=` Not Equal                 |     ✅     |
+|                      | `-`  Subtraction               |     ✅     |
+|                      | `**` Exponentiation            |     ❌     |
+|                      | `<<` Shift Left                |     ✅     |
+|                      | `>>` Shift Right               |     ✅     |
+|                      | `^`  Bitwise XOR               |     ❌     |
+|                      | `\|` Bitwise OR                |     ❌     |
+|                      | `&`  Bitwise AND               |     ❌     |
+|                      | `%`  Modulo                    |     ❌     |
 
-**NOTE** Int can also be used in quantization aware mode, by scaling every input with 2^f and shift left f after every multiplication of two scaled values.
+
 
 ## Structure
-- [circom-2-arithc](https://github.com/namnc/circom-2-arithc) - we're using commit [800e2d4](https://github.com/namnc/circom-2-arithc/commit/800e2d44aa175c57698de739e5839eb7af03498a) not so far from the latest version of [circom-2-arithc](https://github.com/namnc/circom-2-arithc).
-- [tfhe-rs](https://github.com/mhchia/tfhe-rs/) - the custom tfhe-rs framework to run the MPC protocol. We are using commit [704049e](https://github.com/mhchia/tfhe-rs/commit/7eeb7e423e10bd023338d0dd60603b6624ab56eb).
-- [arithc_to_bristol.py](./arithc_to_bristol.py) - a script to transplie the arithmetic Bristol format to tfhe-rs .mpc program.
-- [main.py](./main.py) - the main script to run the circom-tfhe-rs. It does the following:
+
+- [circom-2-arithc](https://github.com/namnc/circom-2-arithc) - we are using the latest version.
+- [tfhe-rs](https://github.com/zama-ai/tfhe-rs) - supports the arithmetization on tfhe
+- [main.py](./main.py) - the main script to run the circom-tfhe. It does the following:
   - Compiles the Circom code to the arithmetic circuit with `circom-2-arithc`.
-  - Generates an tfhe-rs circuit from the Bristol format circuit with `arithc_to_bristol.py`.
-  - Generates tfhe-rs input files for each party from the `inputs_party_i.json`.
-  - Performs the computation using tfhe-rs by running all parties on the local machine.
-  - Prints the outputs.
-- [examples](./examples) - example circuits to run with circom-tfhe-rs.
+  - Generates tfhe-rs program by converting bristol fashion circuit.
+  - Performs the computation using tfhe-rs.
+- [examples](./examples) - example circuits to run with circom-tfhe.
+
+
 
 ## Installation
 
 ### Clone the repo
 
 ```bash
-git clone https://github.com/namnc/circom-tfhe-rs.git
+git clone https://github.com/Vishalkulkarni45/circom-tfhe-rs
 git clone https://github.com/namnc/circom-2-arithc
-git clone https://github.com/mhchia/tfhe-rs/
 ```
 
 ### Build circom-2-arithc
+
 Go to the circom-2-arithc submodule directory:
+
 ```bash
 cd circom-2-arithc
-git checkout 800e2d4
 ```
 
 Initialize the .env file:
+
 ```bash
 touch .env
 vim .env
 ```
-and add LOG_LEVEL="DEBUG"
 
 Build the compiler:
 
@@ -70,86 +72,47 @@ Build the compiler:
 cargo build --release
 ```
 
-### Build tfhe-rs
 
-You may need to install some dependencies, see: [tfhe-rs](https://github.com/mhchia/tfhe-rs/).
-
-Go to the tfhe-rs submodule directory:
-```bash
-cd ../tfhe-rs
-git checkout 704049e
-```
-
-Build the MPC VM for `semi` protocol
-
-```bash
-make -j8 semi-party.x
-# Make sure `semi-party.x` exists
-ls semi-party.x
-```
 
 ## How to run
 
-We have two examples available
+We have two examples available:
+
 - [ops_tests](./examples/ops_tests/) - a benchmark of supported ops for sint
 - [naive_search](./examples/naive_search/) - a benchmark of naive search
 
-In both examples, we assume there are only 2 parties. You will find the following files in each example directory:
-- `circuit.circom` - the circom code representing the circuit to be computed by all parties
-- `mpc_settings.json` - the settings file defining for each party:
-    - the party's name in string format
-    - which input signals they should provide
-    - which output signals they can learn the value of
-- `inputs_party_0.json` - the input file for party 0. It must contain all the inputs for party 0
-- `inputs_party_1.json` - the input file for party 1. It must contain all the inputs for party 1
+In both examples, you will find the following files in each example directory:
 
-See the section [Input files](https://hackmd.io/Iuu9yge4ShKBjawAcmFjvw?view#Input-files) in the write-up for more details.
+- `circuit.circom` - the circom code representing the circuit
+- `{circuit_name}.py` - automated generator for input files and model tfhe-rs program
 
 You can run these examples by following the instructions in the root directory.
 
 ```bash
 # Go back to the root directory of circom-tfhe-rs
 cd ..
+mkdir outputs
 python main.py {circuit_name}
 ```
 - `{circuit_name}` is the name of the circuit you want to run. Can either be `ops_tests` or `naive_search`.
-- Intermediate files will be stored in the `outputs/{circuit_name}` directory. **NOTE**: we also output `circuit.mpc` which you can use to run with the original tfhe-rs.
+- Intermediate files will be stored in the `outputs/{circuit_name}` directory.
 - Outputs are directly printed to the console.
 
 
 
-#### Example `ops_tests`
+## How it works
 
-```bash
-python main.py ops_tests
-```
+1. Generate Rust directory in the `outputs` folder; `outputs/{circuit_name}` and `outputs/{circuit_name}_raw`
 
-You can see the the intermediate files in the `outputs/ops_tests` directory. And you should see the following outputs in the console:
-
-```bash
-...
-========= Computation has finished =========
+   - If the directory exists, it deletes the directory and makes new directory.
 
 
-Outputs: {...}
-```
-
-
-#### Example `naive_search`
-
-```bash
-python main.py naive_search
-```
-
-You can see the the intermediate files in the `outputs/naive_search` directory. And you should see the following outputs in the console:
-
-```bash
-...
-========= Computation has finished =========
-
-
-Outputs: {...}
-```
-
-# Moving Forward
-The `circuit.mpc` program in the respective output folder can be used with tfhe-rs in an appropriate deployment settings.
+2. Add the necessary dependencies in `Cargo.toml` in each Rust directory.
+3. For existing circom circuit, run circom-2-arithc.
+4. Run python script in `examples/{circuit_name}/`
+   - It generates model tfhe-rs code, `input.json`
+   - After generating `input.json`, make a new file `input_struct.json` which has different format.
+   - After generating model tfhe-rs code, copy it into `outputs/{circuit_name}_raw`
+   - Copy `input.json` and `input_struct.json` in `outputs/{circuit_name}` and `outputs/{circuit_name}_raw`
+5. Using bristol fashion circuit, generate tfhe-rs code.
+6. Run converted tfhe-rs code, and compare it with model tfhe-rs code.
