@@ -60,4 +60,6 @@ If you are applying for a sponsor project idea or grant, select the sponsors bel
 
 ## Video Demo (For Submission)
 
-- Will make it available soon...
+You can play live with the app:
+
+- [Live Website](https://whispr-two.vercel.app/)
