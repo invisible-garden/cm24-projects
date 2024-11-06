@@ -6,10 +6,23 @@ Enter the name of your project above and provide a brief description of your pro
 
 **Project Members**
 
-- Name: {gunit malik}
+- Name: {gunit}
   - Discord Username: {gunestro}
   - Devfolio Username: {gunestro}
   - Github Username: {guni7}
+  - Role: Lead + KZG
+
+- Name: {will}
+  - Discord Username: {0xneves}
+  - Devfolio Username: {0xneves}
+  - Github Username: {0xneves}
+  - Role: Polynomial Arithmetic Implementation
+
+- Name: {andy}
+  - Discord Username: {andersonlthome}
+  - Devfolio Username: {andersonlthome}
+  - Github Username: {andersonlthome}
+  - Role: Tests + Documentation
 
 ## Technical Approach
 
