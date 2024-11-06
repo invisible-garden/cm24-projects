@@ -1,7 +1,5 @@
 # CNX-DonationBoard
 
-Enter the name of your project above and provide a brief description of your project including what is the impact for the ecosystem or society.
-
 ## Team Information
 
 **Project Members**
@@ -14,9 +12,9 @@ Enter the name of your project above and provide a brief description of your pro
 
 - Name: `Tim Pechersky`
   - Discord Username: `peersky`
-  - Devfolio Username: ``
+  - Devfolio Username: `peersky`
   - Github Username: `peersky`
-  - Role: `Developer` and `Sponsor`
+  - Role: `Developer` and `Mentor`
 
 ## Technical Approach
 
