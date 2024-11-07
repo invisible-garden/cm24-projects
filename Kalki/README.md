@@ -54,7 +54,7 @@ My future plan is to write a more optimized implementation so that the framework
 
 ## Project Links (For Submission)
 
-https://github.com/surfer05/standard-group-messaging
+https://github.com/surfer05/Kalki
 
 ## Video Demo (For Submission)
 
