@@ -1,4 +1,3 @@
-
 # {Project Name}
 
 Enter the name of your project above and provide a brief description of your project including what is the impact for the ecosystem or society.
