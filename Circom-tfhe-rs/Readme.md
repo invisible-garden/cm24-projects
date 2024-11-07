@@ -1,118 +1,53 @@
 # Circom-tfhe-rs
 
-Circom-tfhe-rs allows user to perform TFHE arithmetizations by writing CIrcom code using the zama's tfhe-rs framework. Circom code is compiled into an arithmetic circuit and then translated gate by gate to the corresponding tfhe-rs operators.
-
-**NOTE:** Now circom-2-arithc also conveniently outputs the Bristol format with corresponding circuit_info (hence the json_arbistol is not necessary anymore).
+This project will allow people to write Circom code and run FHE with the tfhe-rs framework, enabling more options for benchmarks and different use cases.
 
 
+## Team Information
 
-## Supported Circom Type and Op
+**Project Members**
 
-| Type                 | Op                             | Supported |
-| -------------------- | ------------------------------ | :-------: |
-| **Int** (sint, cint) | `+`      Addition              |     ✅     |
-|                      | `/`      Division              |     ✅     |
-|                      | `==`     Equality              |     ✅     |
-|                      | `>`      Greater Than          |     ✅     |
-|                      | `>=`     Greater Than or Equal |     ✅     |
-|                      | `<`      Less Than             |     ✅     |
-|                      | `<=`     Less Than or Equal    |     ✅     |
-|                      | `*`   Multiplication           |     ✅     |
-|                      | `!=` Not Equal                 |     ✅     |
-|                      | `-`  Subtraction               |     ✅     |
-|                      | `**` Exponentiation            |     ❌     |
-|                      | `<<` Shift Left                |     ✅     |
-|                      | `>>` Shift Right               |     ✅     |
-|                      | `^`  Bitwise XOR               |     ❌     |
-|                      | `\|` Bitwise OR                |     ❌     |
-|                      | `&`  Bitwise AND               |     ❌     |
-|                      | `%`  Modulo                    |     ❌     |
+- Name: {Vishal Kulkarni}
+  - Discord Username: {maxcart_k}
+  - Devfolio Username: {vishalkoolkarni}
+  - Github Username: {Vishalkulkarni45}
+  
+- Name: {Changmin Cho}
+  - Discord Username: {index.tree}
+  - Devfolio Username: {indextree}
+  - Github Username: {indextree}
+  
 
+## Technical Approach
 
+- **Components** (Select all that apply)
+  - [ ] Frontend
+  - [ ] Backend
+  - [ ] Smart Contracts
+  - [-] ZK Circuits
+  - [ ] Machine Learning (ML)
 
-## Structure
+- High-level outline of the main technical components, tech you used and approaches used in the project.
 
-- [circom-2-arithc](https://github.com/namnc/circom-2-arithc) - we are using the latest version.
-- [tfhe-rs](https://github.com/zama-ai/tfhe-rs) - supports the arithmetization on tfhe
-- [main.py](./main.py) - the main script to run the circom-tfhe. It does the following:
-  - Compiles the Circom code to the arithmetic circuit with `circom-2-arithc`.
-  - Generates tfhe-rs program by converting bristol fashion circuit.
-  - Performs the computation using tfhe-rs.
-- [examples](./examples) - example circuits to run with circom-tfhe.
+## Sponsors (if applicable)
 
+If you are applying for a sponsor project idea or grant, select the sponsors below.
 
+- [ ] Push Protocol
+- [ ] Polygon
+- [ ] Chainlink
+- [ ] Brevis
+- [ ] Orbiter
+- [ ] ZKM
+- [ ] Nethermind
+- [-] PSE
+- [ ] AltLayer
 
-## Installation
+## What do you plan to achieve with your project?
 
-### Clone the repo
-
-```bash
-git clone https://github.com/Vishalkulkarni45/circom-tfhe-rs
-git clone https://github.com/namnc/circom-2-arithc
-```
-
-### Build circom-2-arithc
-
-Go to the circom-2-arithc submodule directory:
-
-```bash
-cd circom-2-arithc
-```
-
-Initialize the .env file:
-
-```bash
-touch .env
-vim .env
-```
-
-Build the compiler:
-
-```bash
-cargo build --release
-```
+What is the plan for this project from now on? Do you plan to continue to work on it? Do you want some help? How could we help you?
 
 
+## Project Links (For Submission)
 
-## How to run
-
-We have two examples available:
-
-- [ops_tests](./examples/ops_tests/) - a benchmark of supported ops for sint
-- [naive_search](./examples/naive_search/) - a benchmark of naive search
-
-In both examples, you will find the following files in each example directory:
-
-- `circuit.circom` - the circom code representing the circuit
-- `{circuit_name}.py` - automated generator for input files and model tfhe-rs program
-
-You can run these examples by following the instructions in the root directory.
-
-```bash
-# Go back to the root directory of circom-tfhe-rs
-cd ..
-mkdir outputs
-python main.py {circuit_name}
-```
-- `{circuit_name}` is the name of the circuit you want to run. Can either be `ops_tests` or `naive_search`.
-- Intermediate files will be stored in the `outputs/{circuit_name}` directory.
-- Outputs are directly printed to the console.
-
-
-
-## How it works
-
-1. Generate Rust directory in the `outputs` folder; `outputs/{circuit_name}` and `outputs/{circuit_name}_raw`
-
-   - If the directory exists, it deletes the directory and makes new directory.
-
-
-2. Add the necessary dependencies in `Cargo.toml` in each Rust directory.
-3. For existing circom circuit, run circom-2-arithc.
-4. Run python script in `examples/{circuit_name}/`
-   - It generates model tfhe-rs code, `input.json`
-   - After generating `input.json`, make a new file `input_struct.json` which has different format.
-   - After generating model tfhe-rs code, copy it into `outputs/{circuit_name}_raw`
-   - Copy `input.json` and `input_struct.json` in `outputs/{circuit_name}` and `outputs/{circuit_name}_raw`
-5. Using bristol fashion circuit, generate tfhe-rs code.
-6. Run converted tfhe-rs code, and compare it with model tfhe-rs code.
+https://github.com/Vishalkulkarni45/circom-tfhe-rs
