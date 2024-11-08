@@ -7,11 +7,11 @@
 >
 >Introducing zero knowledge proofs for authentication by proving certificates to issuer who is also verifier.
 >
->Everything about [Certificate Issuer(CI) and Improvements](https://github.com/GMMS-Labs/cm24-projects/blob/main/zkCX/CI_and_improvements.md).
+>Everything about [Certificate Issuer(CI) and Improvements](https://github.com/GMMS-Labs/zkCX/blob/main/CI_and_improvements.md).
 > 
->Evertyhing about [X.509 Overview](https://github.com/GMMS-Labs/cm24-projects/blob/main/zkCX/X509_overview.md) and [X.509 Drawbacks](https://github.com/GMMS-Labs/cm24-projects/blob/main/zkCX/X509_drawbacks.md).
+>Evertyhing about [X.509 Overview](https://github.com/GMMS-Labs/zkCX/blob/main/X509_overview.md) and [X.509 Drawbacks](https://github.com/GMMS-Labs/zkCX/blob/main/X509_drawbacks.md).
 >
->Everything about current implemenatation [zkcx rust codebase](https://github.com/GMMS-Labs/cm24-projects/tree/main/zkCX/zkcx)
+>Everything about current implemenatation [zkcx](https://github.com/GMMS-Labs/zkCX)
 >
 ---
 
@@ -130,7 +130,7 @@ Highlight reusable code patterns, key code snippets, and best practices - what a
 
 ## Project Links (For Submission)
 Please provide links for the project repo and to any relevant documentation, code, or other resources that you've used in your project.
-> [zkCX](https://github.com/GMMS-Labs/cm24-projects/tree/main/zkCX)
+> [zkCX](https://github.com/GMMS-Labs/zkCX)
 > [openRSP](https://github.com/Blockchain-Powered-eSIM/OpenRSP/commits/main/?since=2024-09-30&until=2024-11-05)
 
 ## Video Demo (For Submission)
