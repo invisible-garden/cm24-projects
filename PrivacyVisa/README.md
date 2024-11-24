@@ -1,46 +1,49 @@
 # PrivacyVisa
 
-PrivacyVisa is a secure payment solution that utilizes zero-knowledge proofs (ZKPs) to protect cardholder privacy. By enabling transactions without exposing sensitive information such as card numbers and CVV codes, PrivacyVisa ensures that merchants can process payments without accessing or storing critical cardholder details. This innovative approach minimizes fraud risk and enhances privacy, offering a safer alternative for secure transactions.
+PrivacyVisa is a secure payment solution that utilizes zero-knowledge proofs (ZKPs) to protect cardholder privacy. By enabling transactions without exposing sensitive information like card numbers and CVV codes, PrivacyVisa ensures that merchants can process payments without accessing or storing critical cardholder details. This innovative approach minimizes fraud risk and enhances privacy, offering a safer alternative for secure transactions.
 
 ## Team Information
 
 **Project Members**
 
-- Name: ployhold
+- **Ployhold**
+
   - Discord Username: ployhold
-  - Devfolio Username: ________
-  - Github Username: lunafangg
+  - Devfolio Username: lunafang
+  - GitHub Username: lunafangg
   - Role: Dev
 
-- Name: Kriz
+- **Kriz**
+
   - Discord Username: Kriz
   - Devfolio Username: Kriz
-  - Github Username: KritzHeng
+  - GitHub Username: KritzHeng
   - Role: Dev
 
-- Name: wtchaidev
+- **wtchaidev**
+
   - Discord Username: WTCHAI
   - Devfolio Username: WTCHAI
-  - Github Username: WTCHAI
+  - GitHub Username: WTCHAI
   - Role: Dev
 
-- Name: kongphop
+- **Kongphop**
   - Discord Username: JFKongphop
   - Devfolio Username: JFKongphop
-  - Github Username: JFKongphop
+  - GitHub Username: JFKongphop
   - Role: Dev
-
 
 ## Technical Approach
 
 - **Components** (Select all that apply)
-  - [X] Frontend
-  - [X] Backend
+
+  - [x] Frontend
+  - [x] Backend
   - [ ] Smart Contracts
-  - [X] ZK Circuits
+  - [x] ZK Circuits
   - [ ] Machine Learning (ML)
 
-- High-level outline of the main technical components, tech you used and approaches used in the project.
+- **High-Level Outline**: Key technical components and tools used include frontend and backend integration with ZK circuits to ensure privacy and security, leveraging zero-knowledge proof frameworks for seamless and secure transactions.
 
 ## Sponsors (if applicable)
 
@@ -57,36 +60,39 @@ If you are applying for a sponsor project idea or grant, select the sponsors bel
 - [ ] AltLayer
 
 ## What do you plan to achieve with your project?
+
 ### Project Goals
+
 PrivacyVisa aims to protect cardholders’ data by allowing secure payments without exposing sensitive information like card numbers or CVVs. By using Zero-Knowledge Proofs (ZKPs), PrivacyVisa verifies transactions safely and reduces fraud risk.
-we plan to continue developing PrivacyVisa, focusing on:
+
 ### Future Plans
-we plan to continue developing PrivacyVisa, focusing on:
 
-PrivacyVisa Wallet to store data securely.
-On-Chain Verifier for transparent, decentralized payment checks.
-zkVM Support for more complex, scalable transactions.
-Trusted Setup-Free Proofs using RISC0 to increase flexibility.
-Help with optimizing the on-chain verifier or zkVM integration would be beneficial.
+- **PrivacyVisa Wallet**: Develop a secure wallet to store user data, ensuring both privacy and protection of sensitive information during transactions.
+- **On-Chain Verifier**: Implement a transparent and decentralized payment verification system, allowing transaction checks directly on-chain to increase trust and reduce the need for intermediaries.
+- **zkVM Support**: Enable compatibility with zero-knowledge virtual machines (zkVMs) to handle complex and scalable transactions, expanding PrivacyVisa’s potential for high-throughput and private financial applications.
+- **Trusted Setup-Free Proofs using RISC0**: Integrate RISC0 to create proofs that do not require a trusted setup, making the system more flexible, secure, and easier to adapt for new use cases.
+- **Optimization Assistance**: Seek support to refine the on-chain verifier and zkVM integration, enhancing efficiency and ensuring seamless performance across PrivacyVisa’s infrastructure.
 
-## Lessons Learned (For Submission)
+## Lessons Learned
 
-* Privacy-First Payments: PrivacyVisa shows how ZKPs can keep card details safe and private.
-* Trust-Minimized Architecture: The project emphasizes keeping sensitive data within user control, preventing unauthorized merchant access, which is valuable for high-security applications.
-Reusable Code Patterns and Best Practices
+1. **Knowledge**
 
-Some reusable components include:
+   - We dove deep into zero-knowledge proofs, learning how protocols like Schnorr work and exploring the math fundamentals of set theory, graph theory, and fields. This gave us a whole new perspective on how these concepts apply in real-world security and privacy.
+   - It was eye-opening to see just how many protocols and technologies are out there—each with its unique role in safeguarding data. This journey really expanded our horizon on what’s possible in the world of cryptography.
 
-* ZKP Circuit Design (Circom & SnarkJS): The setup and verification circuits can be adapted for other financial applications where ZKPs can secure sensitive data. This pattern of "public inputs without disclosing sensitive information" could apply broadly to other identity and financial systems.
-* Nonce-Based Verification Mechanism: Using nonces for each transaction enhances security against replay attacks. This pattern could be used in various financial or verification applications.
-* Hash-Based Proof Generation: Generating proofs through hash combinations ensures data integrity while preventing data leakage. This approach can benefit projects involving sensitive data verification.
-* Layered Proof Generation & Validation: The project’s approach of layering different hash combinations to validate transactions securely can be repurposed in identity and credential verification contexts.
+2. **Skills**
+
+   - **ZKP Circuit Design (Circom & SnarkJS)**: We got hands-on experience building and verifying circuits. Watching our code come to life felt like seeing icicles form a complex, yet beautiful structure, especially with the Circom and SnarkJS tools.
+   - **Nonce-Based Verification**: Working with nonces for each transaction taught us how small, unique tweaks add powerful security against replay attacks. It’s a method we can imagine applying beyond the camp.
+   - **Hash-Based Proof Generation**: Using hashes to generate proofs showed us how to keep data secure without leaks—an invaluable skill for handling sensitive information in verification projects.
+
+3. **Friendship**
+   - Beyond the coding, we had some unforgettable nights camping out under the stars and bonding over late-night debugging sessions. We made supportive friends and met incredible experts who turned the whole experience into something inspiring and fun. It was amazing to feel like part of a close-knit community while tackling real-world challenges together.
 
 ## Project Links (For Submission)
 
-Github Link: https://github.com/PrivacyVisa/PrivacyVisa-POC
+- **GitHub**: [PrivacyVisa-POC](https://github.com/PrivacyVisa/PrivacyVisa-POC)
 
 ## Video Demo (For Submission)
 
-Youtube: https://www.youtube.com/watch?v=5u7ukwcUM7s
-
+- **YouTube**: [Project Demo](https://www.youtube.com/watch?v=5u7ukwcUM7s)
