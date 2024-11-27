@@ -1,4 +1,4 @@
-# {Project Name}
+# Dive Deep into Circle STARKs
 
 The project is named "Dive Deep into Circle STARKs." Circle STARK is 1.4 times faster than a normal STARK, but the paper is hard to understand, and existing articles that discuss Circle STARK tend to neglect the mathematical details. Moreover, no articles cover the decomposition of the quotient polynomial. Therefore, I wrote a series of articles to explain the mathematical details, covering Sections 3 to 5 of the paper, including the decomposition of the quotient polynomial.
 
@@ -13,11 +13,11 @@ Zhihu: <https://www.zhihu.com/org/secbit/posts>
 Wechat/Weixin Articles Archive: <https://mp.weixin.secbit.io/>
 **Project Members**
 
-- Name: {YangXiaoXue}
-  - Discord Username: {vanilla07832}
-  - Devfolio Username: {XiaoXue}
-  - Github Username: {YangXiaoXue205}
-  - Role: {ZK researcher}
+- Name: YangXiaoXue
+  - Discord Username: vanilla07832
+  - Devfolio Username: XiaoXue
+  - Github Username: YangXiaoXue205
+  - Role: ZK researcher
 
 ## What do you plan to achieve with your project?
 
