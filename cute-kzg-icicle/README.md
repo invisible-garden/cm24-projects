@@ -1,6 +1,7 @@
 # {cute kzg icicle}
 
-Enter the name of your project above and provide a brief description of your project including what is the impact for the ecosystem or society.
+This is a bare implementation of the kzg polynomial commitment scheme written in ICICLE v3, meant for understanding how the commitment scheme works. 
+https://github.com/guni7/cute-kzg-icicle
 
 ## Team Information
 
@@ -10,19 +11,6 @@ Enter the name of your project above and provide a brief description of your pro
   - Discord Username: {gunestro}
   - Devfolio Username: {gunestro}
   - Github Username: {guni7}
-  - Role: Lead + KZG
-
-- Name: {will}
-  - Discord Username: {0xneves}
-  - Devfolio Username: {0xneves}
-  - Github Username: {0xneves}
-  - Role: Polynomial Arithmetic Implementation
-
-- Name: {andy}
-  - Discord Username: {andersonlthome}
-  - Devfolio Username: {andersonlthome}
-  - Github Username: {andersonlthome}
-  - Role: Tests + Documentation
 
 ## Technical Approach
 
@@ -33,7 +21,6 @@ Enter the name of your project above and provide a brief description of your pro
   - [ ] ZK Circuits
   - [ ] Machine Learning (ML)
 
-- High-level outline of the main technical components, tech you used and approaches used in the project.
 
 ## Sponsors (if applicable)
 
@@ -51,10 +38,9 @@ If you are applying for a sponsor project idea or grant, select the sponsors bel
 
 ## What do you plan to achieve with your project?
 
-Optimise
+Gain a deeper understanding of KZG, ICICLE and GPU programming practices
 
 ## Lessons Learned (For Submission)
 
 Learnt about KZG, learnt about ICICLE, and some GPU programming practices. 
-
 
