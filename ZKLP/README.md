@@ -67,7 +67,7 @@ This gives our team a unique value proposition: the combination of having both c
 
 - Name: Paul Rodas
   - Discord Username: 0xarcano
-  - Devfolio Username: 0xarcano
+  - Devfolio Username: _arkno_
   - Github Username: [0xarcano](https://github.com/0xarcano)  
   - Role: Senior developer/DevOps
 
