@@ -64,12 +64,6 @@ This gives our team a unique value proposition: the combination of having both c
 ## Team Information
 
 **Project Members**
-
-- Name: Alex Padilla
-  - Discord Username: padimasterec
-  - Devfolio Username: padimasterec
-  - Github Username: padimaster
-  - Role: Fullstack - PM
  
 - Name: Paul Rodas
   - Discord Username: 0xarcano
