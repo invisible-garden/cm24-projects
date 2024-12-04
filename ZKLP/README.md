@@ -64,38 +64,36 @@ This gives our team a unique value proposition: the combination of having both c
 ## Team Information
 
 **Project Members**
- 
+
 - Name: Paul Rodas
   - Discord Username: 0xarcano
   - Devfolio Username: 0xarcano
-  - Github Username: _arkno_ 
+  - Github Username: [0xarcano](https://github.com/0xarcano)  
   - Role: Senior developer/DevOps
 
 - Name: Carlos Israel Jimenez 
   - Discord Username: carlos_israelj 
   - Devfolio Username: carlos_israelj 
-  - Github Username: cijimenez
+  - Github Username: [cijimenez](https://github.com/cijimenez) 
   - Role: Developer
 
 - Name: Lucila Pastore 
   - Discord Username: lucilajuliana  
   - Devfolio Username: lucilajuliana
-  - Github Username: lucilapastore
+  - Github Username: [lucilapastore](https://github.com/lucilapastore)
   - Role: PM
 
 - Name: Nathalia Barreiros
     - Discord Username: nathbarreiros 
     - Devfolio Username: nathbarreiros
-    - Github Username: NathaliaBarreiros
+    - Github Username: [NathaliaBarreiros](https://github.com/NathaliaBarreiros)
     - Role: Developer - Instructor
 
 - Name: Daniel Arroyo 
     - Discord Username: daniel0ar
     - Devfolio Username: daniel0ar
-    - Github Username: daniel0ar
+    - Github Username: [daniel0ar](https://github.com/orgs/Privacy-Lab-Latam-Builders/people/daniel0ar)
     - Role: Smart Contract and FE developer
-
-### Team Code Repos
 
 ### Partners that trusted us in the past for collaborations
 * [Ethereum Argentina](https://ethereumargentina.org/)
@@ -142,18 +140,15 @@ If you are applying for a sponsor project idea or grant, select the sponsors bel
 
 ## What do you plan to achieve with your project?
 
-What is the plan for this project from now on? Do you plan to continue to work on it? Do you want some help? How could we help you?
+The project aims to train developers across Latin America by providing foundational knowledge of Zero-Knowledge Proofs (ZKPs) and open-source development skills. Through a layered program structure, participants will gain hands-on experience with relevant tools and technologies, enabling them to contribute meaningfully to open-source repositories. Additionally, the project seeks to strengthen a Spanish-speaking community around privacy-enhancing technologies (PETs), ensuring participants can integrate advanced cryptographic tools into real-world projects with a focus on privacy and security.
 
 ## Lessons Learned (For Submission)
+- **Key Takeaways:** A layered structure adapted to the cultural and linguistic context of LATAM enhances engagement and learning outcomes. Including practical tasks bridges the gap between theory and practice, ensuring participants acquire meaningful skills.
 
-- What are the most important takeaways from your project?
-- Are there any patterns or best practices that you've learned that would be useful for other projects?
-- Highlight reusable code patterns, key code snippets, and best practices - what are some of the ‘lego bricks’ you’ve built, and how could someone else best use them?
+- **Best Practices:** Open and unrestricted content ensures accessibility and inclusivity. Structured mentoring and task-based learning promote progress and foster community collaboration.
+
+- **Reusable Resources:** Practical exercises using Circom to design ZK circuits, alongside Noir as an initial tool for implementing Zero-Knowledge Proofs. Participants then progress to Rust development with frameworks like Halo2 and Plonky3. These resources include templates, code examples, and detailed guides to facilitate learning and collaboration on advanced projects.
 
 ## Project Links (For Submission)
+[Repository](https://github.com/Privacy-Lab-Latam-Builders/moodle-web3)
 
-https://github.com/Privacy-Lab-Latam-Builders/moodle-web3
-
-## Video Demo (For Submission)
-
-Please provide a link to a video demo of your project. The demo should be no longer than 5 minutes.
