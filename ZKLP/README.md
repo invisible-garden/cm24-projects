@@ -150,8 +150,9 @@ The project aims to train developers across Latin America by providing foundatio
 - **Reusable Resources:** Practical exercises using Circom to design ZK circuits, alongside Noir as an initial tool for implementing Zero-Knowledge Proofs. Participants then progress to Rust development with frameworks like Halo2 and Plonky3. These resources include templates, code examples, and detailed guides to facilitate learning and collaboration on advanced projects.
 
 ## Project Links (For Submission)
-[Repository](https://github.com/Privacy-Lab-Latam-Builders/moodle-web3)
-[Slides](https://www.canva.com/design/DAGVyfW9XEE/Cn8ak01eYwPkuH-CK6YZVA/edit)
+- [Repository](https://github.com/Privacy-Lab-Latam-Builders/moodle-web3)
+
+- [Slides](https://www.canva.com/design/DAGVyfW9XEE/Cn8ak01eYwPkuH-CK6YZVA/edit)
 
 ## Video Demo (For Submission)
 
