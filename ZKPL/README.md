@@ -1,4 +1,4 @@
-# ZK Developer Program
+# ZK Learning Program
 
 ### Overview
 The ZK Developer Program will be an online educational bootcamp designed to cultivate a new generation of contributors across Latin America.
