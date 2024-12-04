@@ -37,7 +37,7 @@ The team members are all graduates of the PSE Core Program, with hands-on experi
 
 Most of them also were selected for learning grants to continue their work on PSE projects, further deepening their expertise in programmable cryptography technologies and open-source contributions.
 
-Besides that, Alex Padilla and Lucila Pastore served as the program coordinators in Ecuador and Argentina, respectively. Their leadership roles have provided them with valuable insights into what worked, what didn’t, and what needs to be modified or improved for the next editions.
+Besides that, Lucila Pastore was the program coordinator in Argentina. Her leadership role has provided her with valuable insights into what worked, what didn’t work, and what needs to be modified or improved for future editions.
 
 This gives our team a unique value proposition: the combination of having both completed the program and coordinated it gives us a comprehensive understanding of how to optimize the learning experience for this new format.
 
@@ -67,7 +67,7 @@ This gives our team a unique value proposition: the combination of having both c
 
 - Name: Paul Rodas
   - Discord Username: 0xarcano
-  - Devfolio Username: _arkno_
+  - Devfolio Username: \_arkno\_
   - Github Username: [0xarcano](https://github.com/0xarcano)  
   - Role: Senior developer/DevOps
 
