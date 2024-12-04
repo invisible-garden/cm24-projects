@@ -151,4 +151,10 @@ The project aims to train developers across Latin America by providing foundatio
 
 ## Project Links (For Submission)
 [Repository](https://github.com/Privacy-Lab-Latam-Builders/moodle-web3)
+[Slides](https://www.canva.com/design/DAGVyfW9XEE/Cn8ak01eYwPkuH-CK6YZVA/edit)
+
+## Video Demo (For Submission)
+
+- [Project Link](https://drive.google.com/file/d/1gAhVLpTACJlL_sYz9cHEVLpWEtlVS4PJ/view?usp=sharing)
+
 
