@@ -1,0 +1,3 @@
+[submodule "realChat"]
+	path = realChat
+	url = https://github.com/TecSong/realChat.git
