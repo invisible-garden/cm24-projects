@@ -95,6 +95,79 @@ This gives our team a unique value proposition: the combination of having both c
     - Github Username: [daniel0ar](https://github.com/orgs/Privacy-Lab-Latam-Builders/people/daniel0ar)
     - Role: Smart Contract and FE developer
 
+## Syllabus
+
+**1. Number Theory**
+- Groups/Group Theory 
+- Cyclic groups 
+- Modular Arithmetic 
+
+**2. Cryptographic Primitives**
+- Hash functions
+- Cryptography basics
+- Merkle Trees
+- Semaphore Workshop
+
+**3. Applied Cryptography**
+- Commitments
+- Polynomial commitments
+- Trusted setup (P0tion workshop)
+- KZG
+- MPC (Multi-Party Computation)
+
+**4. What is ZKP?**
+- Flow diagrams (Paul)
+- Blog (Vivian - practical content)
+
+**5. Circuits**
+ Finite Fields
+- Modules
+- Signal circuit
+- RICS
+- Witness
+
+**6. ZK-SNARKs**
+- Groth16
+- Plonk
+- Benchmarking between both
+
+**7. ZK-STARKs**
+- FRI (Fast Reed-Solomon Interactive Oracle Proofs)
+- Circle STARK
+- Benchmarking between both
+
+**8. Contribution Workshops**
+- MACI + Annonadar (Wilman and Cris)
+- Semaphore Tutorial (Fernando)
+- ZK-KIT (Paul)
+
+**9. Project Workshops**
+- ZK Email
+- TLS Notary
+
+**10. Noir, Cairo, and Halo2**
+**11. ZKEVM**
+- Polygon
+- Plonky3
+- Scroll
+- Mina
+  
+**12. Contributions**
+- Projects Open Source 
+- Bounties
+  
+**13. Follow-Up Weeks**
+- Follow-up Week 1
+- Follow-up Week 2
+
+  
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/109b6484-7d3a-4fba-9b60-a63d88a6fae7" alt="Syllabus_diagram">
+  <br>
+  <strong>Syllabus Diagram - Invisible Garden.Figure 1</strong>
+</p>
+
+
 ### Partners that trusted us in the past for collaborations
 * [Ethereum Argentina](https://ethereumargentina.org/)
 * [Ethereum Costa Rica](https://ethereum.cr/)
