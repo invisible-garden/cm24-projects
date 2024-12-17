@@ -108,7 +108,7 @@ This gives our team a unique value proposition: the combination of having both c
 - Merkle Trees
 - Semaphore Workshop
 
-**3. More Deep**
+**3. Applied Cryptography**
 - Commitments
 - Polynomial commitments
 - Trusted setup (P0tion workshop)
